@@ -1,11 +1,10 @@
-html {
-    margin: auto 0px;
-    padding: 0px;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 .canvas {
     position: absolute;
-    top: 0;
     background-image: url("../public/images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,13 +14,38 @@ html {
     opacity: 0.5;
     margin:0px auto;
     z-index: -9999;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+
+    100% { 
+        opacity: 0.5; 
+    } 
 }
 
 #user-output {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-output > p {
     color: black;
     font-family: helvetica;
     font-weight: bold;
     font-size: 50px;
-    text-align: center;
-    height: auto;
+
+#timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
