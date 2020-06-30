@@ -1,43 +1,52 @@
+form {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
 .modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    margin: 0 auto;
+    align-self: center;
   }
   
   /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 0 auto;
-    margin-top: 7%;
-    opacity: 0.7;
-    height: 70%;
-    width: 70%;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #888;
-    animation: createBox 1s;
-  }
+.modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  margin-top: 10.5%;
+  opacity: 0.6 !important;
+  height: 70%;
+  width: 70%;
+  border-radius: 5px;
+  border: 1px solid #888;
+  animation: createBox 1s;
+  display: block;
+}
 
-  .modal-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
 
+@keyframes createBox {
+  from {
+    transform: scale(0);
   }
-
-  @keyframes createBox {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(1);
-    }
+  to {
+    transform: scale(1);
   }
+}
   
   /* The Close Button */
   .close {
@@ -46,26 +55,128 @@
     float: right;
     font-size: 16px;
     border-radius: 50%;
+    border: 2px solid white;
     background-color: white;
     padding: 9px;
     padding-left: 13px;
     padding-right: 13px;
     position: relative;
-    top: -30px;
-    right: -30px;
+    top: -15px;
+    right: -15px;
     cursor: pointer;
   }
   
   .close:hover,
   .close:focus {
     color: white;
-    background-color: black;
-    border: 1px solid white;
+    background-color: rgba(189, 152, 167, 0.9);
+    border: 2px solid white;
     text-decoration: none;
     cursor: pointer;
   }
-
+  
   #user-greeting {
     font-size: 60px;
     font-family: 'Marck Script';
-}
+  }
+  
+  #user-form-description {
+    font-family: 'Palanquin', sans-serif;
+  }
+
+  .user-form {
+    display: block;
+  }
+
+  .user-form-inner {
+    font-family: 'Palanquin', sans-serif;
+    height: 60%;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .user-form-inner::-webkit-scrollbar {
+    width: 0.7em;
+    background: white;
+  }
+
+  .user-form-inner::-webkit-scrollbar-thumb {
+    background: rgba(189, 152, 167, 0.3);
+    border-radius: 10px;
+    height:10px;
+  }
+  
+  .user-form-inner::-webkit-scrollbar-track-piece {
+     display:none;
+  }
+
+  .user-form-name {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .user-form-thought {
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+
+  #name-input {
+    width: 350px;
+    height: 40px;
+    border-radius: 25px;
+    font-family: 'Marck Script';
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    background-color: rgba(189, 152, 167, 0.2);
+    overflow-wrap: normal;
+    padding: 3px;
+  }
+
+  #name-input:active {
+    outline: none;
+  }
+
+  #name-input:focus {
+    outline: none;
+  }
+
+  #name-input:hover {
+    outline: none;
+  }
+
+  #thought-input {
+    padding: 15px;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 25px;
+    font-family: 'Marck Script';
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: rgba(189, 152, 167, 0.2);
+  }
+
+  /* greeting animation */
+
+  .ml16 {
+    color: black;
+    font-family: 'Marck Script';
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 1;
+    overflow: hidden;
+  }
+  
+  .ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }

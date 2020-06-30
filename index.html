@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./dist/main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet">
     </head>
     <body>
 <!-- navbar -->
@@ -29,19 +30,24 @@
                 <section class="modal-inner">
                     
                     <!-- user form -->
-                    <form name="user-form">
+                    <form class="user-form">
                         <p class="user-form-welcome">
-                            <p id="user-greeting"></p>
-                            <p id="user-form-description">
-                                Before we begin today's meditation,
-                            </p>
+                            <h1 class="ml16">
+                                <p id="user-greeting"></p>
+                            </h1>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
                         </p>
                         <div class="user-form-inner">
-                            <p class="user-form-name">please tell us your name.</p>
+                            <p class="user-form-name">
+                                Before we begin today's meditation,
+                                <br/>
+                                tell us your name:
+                            </p>
                             <input type="text" id="name-input" id="user-name">
                             <br/>
-                            <p class="user-form-thought"> And what has been on your mind? </p> 
-                            <input type="text" id="thought-input" id="user-thought-input">
+                            <p class="user-form-thought"> What's on your mind? </p> 
+                            <textarea id="thought-input" id="user-thought-input"></textarea>
+                            <br/>
                             <button id="user-button">Enter</button>
                         </div>
                     </form>
