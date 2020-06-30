@@ -1,7 +1,4 @@
 .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     width: 100%; /* Full width */
@@ -14,11 +11,13 @@
   /* Modal Content */
   .modal-content {
     background-color: #fefefe;
+    margin: 0 auto;
+    margin-top: 7%;
     opacity: 0.7;
     height: 70%;
     width: 70%;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: 5px;
     border: 1px solid #888;
     animation: createBox 1s;
   }
@@ -34,15 +33,26 @@
   
   /* The Close Button */
   .close {
-    color: #aaaaaa;
+    color: black;
+    font-family: Lato;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 9px;
+    padding-left: 13px;
+    padding-right: 13px;
+    position: relative;
+    top: -30px;
+    right: -30px;
+    cursor: pointer;
   }
   
   .close:hover,
   .close:focus {
-    color: #000;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
     text-decoration: none;
     cursor: pointer;
   }
