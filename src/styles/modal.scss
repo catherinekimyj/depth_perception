@@ -22,6 +22,14 @@
     animation: createBox 1s;
   }
 
+  .modal-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
   @keyframes createBox {
     from {
       transform: scale(0);
@@ -56,3 +64,8 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  #user-greeting {
+    font-size: 60px;
+    font-family: 'Marck Script';
+}

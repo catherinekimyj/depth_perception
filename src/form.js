@@ -1,8 +1,23 @@
 class Form {
     constructor() {
         this.submitInput();
+        this.greeting();
 
     }
+
+    greeting(greeting) {
+        const date = new Date();
+        const hour = date.getHours();
+        const greetingEle = document.getElementById('user-greeting');
+
+        if(hour > 4 && hour < 12) {
+            return greetingEle.innerHTML = "Good morning";
+        } else if (hour > 11 && hour < 18) {
+            return greetingEle.innerHTML = "Good afternoon";
+        } else {
+            return greetingEle.innerHTML = "Good evening";
+        }
+    };
     
     submitInput() {
         const nameBtn = document.getElementById('user-button');
