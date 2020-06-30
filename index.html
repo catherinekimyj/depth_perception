@@ -25,23 +25,23 @@
         
         <!-- modal start -->
         <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close"><i class="fas fa-times"></i></span>
+            <div class="modal-content showModal">
+                <span class="close" id="close"><i class="fas fa-times"></i></span>
+                <p class="user-form-welcome">
+                    <h1 class="ml16">
+                        <p id="user-greeting"></p>
+                    </h1>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+                </p>
                 <section class="modal-inner">
                     
                     <!-- user form -->
                     <form class="user-form">
-                        <p class="user-form-welcome">
-                            <h1 class="ml16">
-                                <p id="user-greeting"></p>
-                            </h1>
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-                        </p>
                         <div class="user-form-inner">
                             <p class="user-form-name">
                                 Before we begin today's meditation,
                                 <br/>
-                                tell us your name:
+                                please tell us your name:
                             </p>
                             <input type="text" id="name-input" id="user-name">
                             <br/>

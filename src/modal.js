@@ -8,39 +8,50 @@ class Modal {
 
     closeModal() {
         const modal = document.getElementById('myModal');
-        const span = document.getElementsByClassName("close")[0];
+        const modalContent = document.getElementsByClassName('modal-content');
+        const closeBttn = document.getElementById("close");
 
-        span.onclick = function() {
-            console.log(span);
+        closeBttn.onclick = function() {
+    debugger
             modal.style.display = "none";
+            // modalContent.classList.remove('hideModal');
+            // modalContent.classList.add('hideModal');
         }
 
         window.onclick = function(event) {
-            console.log(event);
+debugger
             if (event.target == modal) {
             modal.style.display = "none";
+//             modalContent.classList.remove('hideModal');
+// debugger
+//             modalContent.classList.add('hideModal');
             }
         }
     };
 
     openModal() {
         const modal = document.getElementById('myModal');
+        const modalContent = document.getElementsByClassName('modal-content');
         const btn = document.getElementById('myBtn');
-        const span = document.getElementsByClassName("close")[0];
         
         btn.onclick = function() {
+    // debugger
             modal.style.display= "block";
+            // modalContent.classList.add('showModal');
+            // modalContent.classList.remove('hideModal');
         }
         
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
+    //     closeBttn.onclick = function() {
+    //  debugger
+    //         modalContent.classList.add('hideModal');
+    //     }
         
-        window.onclick = function(event) {
-            if (event.target == modal) {
-            modal.style.display = "none";
-            }
-        }
+    //     window.onclick = function(event) {
+    // debugger
+    //         if (event.target == modal) {
+    //         modalContent.classList.add('hideModal');
+    //         }
+    //     }
     }
 
 

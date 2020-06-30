@@ -8,9 +8,7 @@
     width: 50px;
     height: 70%;
     background-color:white;
-    align-self: center;
     border-radius: 25px;
-    margin: auto 0px;
     opacity: 0.65;
     animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
@@ -36,6 +34,7 @@
     height: 70%;
 
     position: absolute;
+    top: 12%;
     left: -150%;
     -webkit-animation: slide 4s forwards;
     -webkit-animation-delay: 2s;
@@ -50,7 +49,6 @@
 @keyframes slide {
     100% { left: 10px; }
 }
-
 
 ul li {
     font-size: 30px;
