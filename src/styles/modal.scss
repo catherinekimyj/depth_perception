@@ -18,7 +18,7 @@ form {
 .modal-content {
   background-color: #fefefe;
   margin: 0 auto;
-  opacity: 0.6 !important;
+  opacity: 0.8 !important;
   height: 70%;
   width: 70%;
   border-radius: 25px;
@@ -29,13 +29,13 @@ form {
   left: 15%;
 }
 
-
 .modal-inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  position: absolute;
+  top: 0px;
   height: 100%;
   width: 100%;
 }
@@ -97,7 +97,6 @@ form {
   }
   
   #user-greeting {
-    font-size: 60px;
     font-family: 'Marck Script';
   }
   
@@ -139,6 +138,7 @@ form {
 
   .user-form-name {
     margin: 10px;
+    margin-top: 20px;
     font-size: 14px;
   }
 
@@ -150,7 +150,7 @@ form {
 
 
   #name-input {
-    width: 350px;
+    width: 54%;
     height: 40px;
     border-radius: 25px;
     font-family: 'Palanquin', sans-serif;
@@ -187,8 +187,8 @@ form {
 
   #thought-input {
     padding: 15px;
-    width: 330px;
-    height: 200px;
+    width: 50%;
+    height: 40%;
     margin: 0 auto;
     border-radius: 25px;
     font-family: 'Palanquin', sans-serif;
@@ -222,8 +222,9 @@ form {
   }
 
   #user-button {
-    width: 350px;
-    height: 40px;
+    width: 54%;
+    padding: 3px;
+    height: 47px;
     border-radius: 25px;
     text-align: center;
     transition: 1s;
@@ -232,6 +233,8 @@ form {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 5%;
     background-color: rgba(189, 152, 167, 0.2);
   }
 
@@ -261,7 +264,7 @@ form {
     letter-spacing: 1;
     overflow: hidden;
     position: absolute;
-    top: -93px;
+    top: -93px; /* -93px */
     width: 100%;
     text-align: center;
   }
@@ -270,3 +273,33 @@ form {
     display: inline-block;
     line-height: 1em;
   }
+
+@media only screen and (max-width: 900px) {
+    .ml16 {
+        font-size: 37px;
+        position: absolute;
+        top: -58px;
+        transition: 1s;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+  .ml16 {
+    font-size: 60px;
+    position: absolute;
+    top: -93px;
+    transition: 1s;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .close {
+    font-size: 12px;
+    padding: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+    top: -10px;
+    right: -10px;
+    transition: 1s;
+  }
+}

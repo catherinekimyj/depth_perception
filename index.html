@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Depth Perception | Meditation Visualization</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./dist/main.css">
@@ -43,10 +43,10 @@
                                 <br/>
                                 please tell us your name:
                             </p>
-                            <input type="text" id="name-input" id="user-name">
+                            <input type="text" id="name-input" id="user-name" maxlength = "35">
                             <br/>
                             <p class="user-form-thought"> What's on your mind? </p> 
-                            <textarea id="thought-input" id="user-thought-input"></textarea>
+                            <textarea id="thought-input" id="user-thought-input" maxlength = "1500"></textarea>
                             <br/>
                             <button id="user-button">Enter</button>
                         </div>
@@ -59,17 +59,37 @@
         
         <!-- canvas -->
         <canvas id="canvas" class="canvas"></canvas>
-        <div id="user-output">Hello</div>
-        
+            <section class="user-output-wrapper">
+                <div id="user-output-greet"></div>
+                <div id="user-output-words"></div>
+            </section>
+            
 
-        <!-- timer -->
-        <section id="timer">
-            <span id="time">05:00</span>
-            <button id="timer-start" onclick="startTimer(5, canvas)">Start</button>
-        </section>
+            <!-- timer -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script>
+                function change() {
+                    let player = document.getElementById('player');
+                    player.setAttribute("src", selection.value);
+                    player.load();
+                }
+            </script>
+
+            <section id="timer">
+                <select id="selection" onchange="change()">
+                    <option id="selection-option" value="">Select Your Sound</option>
+                    <option id="selection-option" value="./src/public/music/brainwaves.mp3">Serenity [10 min]</option>
+                    <option id="selection-option" value="./src/public/music/ocean_waves.mp3">Ocean Waves [8 min]</option>
+                    <option id="selection-option" value="./src/public/music/relaxing.mp3">Gleaming Sun [5 min]</option>
+                </select>
+                <br/>
+
+                <audio id="player" controls="controls">
+                    <source id="mp3_src" src="./src/public/music/brainwaves.mp3" type="audio/mp3" />
+                </audio>
+            </section>
 
         <script src="./dist/main.js"></script>
-        <script src="./src/timer.js"></script>
         <script src="./blotter.min.js"></script>
     </body>
 </html>

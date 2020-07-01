@@ -3,6 +3,7 @@ class Form {
         this.submitInput();
         this.greeting();
         this.animateGreeting();
+        this.animateInput();
     }
 
     greeting() {
@@ -29,13 +30,36 @@ class Form {
         
         nameBtn.onclick = (e) => {
             e.preventDefault();
+
+            // variables for name and thought inputs //
             let name = nameInput.value;
             let thought = thoughtInput.value;
             obj["name"] = name;
             obj["thought"] = thought;
-            debugger
-            console.log(obj);
-            document.getElementById("user-output").innerHTML = obj["name"] + " " + obj["thought"];
+            let nameSplit = obj["name"].split(" ");
+            let capitalizedArr = nameSplit.map((namePart) => 
+                namePart.charAt(0).toUpperCase() + namePart.slice(1));
+            let capitalized = capitalizedArr.join(" ");
+
+            // meditation phrases and encouragements to be selected at random //
+            // const encouragements = [] <<--- input phrases here, then uncomment
+            // const encouragement = encouragements[Math.floor(Math.random() * items.length)];
+
+            if (obj["name"] !== "") {
+                document.getElementById("user-output-greet").innerHTML = "Welcome, " + capitalized;
+            } else {
+                document.getElementById("user-output-greet").innerHTML = "Hi, there."
+            }
+
+            if (obj["thought"] !== "") {
+                document.getElementById("user-output-words").innerHTML = obj["thought"];
+            } else {
+                document.getElementById("user-output-words").innerHTML = "Your goal is not to battle with the mind, but to witness the mind.";
+                // document.getElementById("user-output-words").innerHTML = encouragement;
+
+            }
+            
+            
             modal.style.display = "none";
             // console.log(obj);
         }
@@ -43,7 +67,7 @@ class Form {
     
     animateGreeting() {
 // debugger
-        var textWrapper = document.querySelector('.ml16');
+        let textWrapper = document.querySelector('.ml16');
         textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
         anime.timeline({loop: false})
@@ -61,6 +85,10 @@ class Form {
             delay: 1000
         });
     }
+
+    // animateInput() {
+
+    // }
 }
 
 export default Form;

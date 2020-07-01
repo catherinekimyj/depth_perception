@@ -1,9 +1,10 @@
 import './styles/index.scss';
 import './styles/modal.scss';
 import './styles/navbar.scss';
+import './styles/user_content.scss';
 import Modal from './modal';
 import Form from './form';
-import Timer from './timer';
+// import Player from './player';
 import * as Util from './util';
 
 console.log("Webpack is working!");
@@ -15,4 +16,9 @@ window.addEventListener("DOMContentLoaded", () => {
     const modal = new Modal(canvas);
     // const space = new Space(canvas);
     const form = new Form();
+
+    const player = document.getElementById('player');
+    player.addEventListener("play", function() { console.log("playing")});
+    player.addEventListener("pause", function() { console.log("paused")});
+debugger
 });

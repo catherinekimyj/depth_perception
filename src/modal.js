@@ -22,9 +22,6 @@ class Modal {
 debugger
             if (event.target == modal) {
             modal.style.display = "none";
-//             modalContent.classList.remove('hideModal');
-// debugger
-//             modalContent.classList.add('hideModal');
             }
         }
     };
