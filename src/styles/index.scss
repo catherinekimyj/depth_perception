@@ -42,7 +42,7 @@ html, body {
 
 #user-output-greet {
     font-size: 40px;
-    font-family: 'Palanquin', sans-serif;
+    font-family: 'Marck Script';
 }
 
 #user-output-words {
@@ -51,7 +51,7 @@ html, body {
     max-width: 70%;
     max-height: 70%;
     text-align: center;
-    display: block;
+    display: inline-block;
 }
 
 #timer {
@@ -65,14 +65,4 @@ html, body {
     width: 100%;
     z-index: -990;
     text-align: center;
-}
-
-.ml2 {
-    font-weight: 900;
-    font-size: 3.5em;
-  }
-  
-.ml2 .lett {
-    display: inline-block;
-    line-height: 1em;
 }
