@@ -52,6 +52,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "gsap": "file:gsap-bonus.tgz",
     "start": "^5.1.0"
   }
 }

@@ -3,7 +3,6 @@ class Form {
         this.submitInput();
         this.greeting();
         this.animateGreeting();
-        this.animateInput();
     }
 
     greeting() {
@@ -47,8 +46,10 @@ class Form {
 
             if (obj["name"] !== "") {
                 document.getElementById("user-output-greet").innerHTML = "Welcome, " + capitalized;
+                // this.animateInput();
             } else {
-                document.getElementById("user-output-greet").innerHTML = "Hi, there."
+                document.getElementById("user-output-greet").innerHTML = "Hi, there.";
+                // this.animateInput();
             }
 
             if (obj["thought"] !== "") {
@@ -59,14 +60,13 @@ class Form {
 
             }
             
-            
             modal.style.display = "none";
             // console.log(obj);
         }
     }
     
     animateGreeting() {
-// debugger
+        // debugger
         let textWrapper = document.querySelector('.ml16');
         textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -85,10 +85,35 @@ class Form {
             delay: 1000
         });
     }
-
-    // animateInput() {
-
-    // }
+    
+//     animateInput() {
+// debugger
+//         let userGreet = document.getElementsByClassName('ml2');
+//         let userWords = document.getElementByClassName('ml3').innerHTML;
+//         if(userGreet != "") {
+//             userGreet.innerHTML = userGreet.textContent.replace(/\S/g, "<span class='lett2'>$&</span>");
+//             userWords.innerHTML = userWords.textContent.replace(/\S/g, "<span class='lett3'>$&</span>");
+//         };
+// debugger
+//         anime.timeline({loop: true})
+//         .add({
+//             targets: '.ml2 .lett',
+//             // targets: '.m13 .letter',
+//             scale: [4,1],
+//             opacity: [0,1],
+//             translateZ: 0,
+//             easing: "easeOutExpo",
+//             duration: 950,
+//             delay: (el, i) => 70*i
+//         }).add({
+//             targets: '.ml2',
+//             // targets: '.m13',
+//             opacity: 0,
+//             duration: 1000,
+//             easing: "easeOutExpo",
+//             delay: 1000
+//         });
+//     }
 }
 
 export default Form;

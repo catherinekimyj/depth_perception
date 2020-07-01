@@ -18,7 +18,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const form = new Form();
 
     const player = document.getElementById('player');
-    player.addEventListener("play", function() { console.log("playing")});
-    player.addEventListener("pause", function() { console.log("paused")});
-debugger
+    player.addEventListener("play", function() { Form.animateInput() });
+    player.addEventListener("pause", function() { Form.animateInput() });
 });
