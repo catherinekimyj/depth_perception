@@ -13,6 +13,13 @@ window.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById('canvas');
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
+    let userGreet = document.getElementById('user-output-greet');
+    let userText = document.getElementById('user-output-words');
+    let userGreetTime = userGreet.innerHTML.length;
+    let userTextTime = userText.innerHTML.length;
+    let combinedChars = userTextTime + userGreetTime;
+debugger
+
     const modal = new Modal(canvas);
     // const space = new Space(canvas);
     const form = new Form();
@@ -20,45 +27,30 @@ window.addEventListener("DOMContentLoaded", () => {
     function animateInput() {
         let userGreet = document.getElementById('user-output-greet');
         let userText = document.getElementById('user-output-words');
+        // let userGreetTime = userGreet.innerHTML.length;
+        // let userTextTime = userText.innerHTML.length;
+        // let combinedChars = userTextTime + userGreetTime;
 debugger
-        userGreet.innerHTML = userGreet.innerText.replace(/\S/g, "<span class='letter'>$&</span>");
-        userText.innerHTML = userText.innerText.replace(/\S/g, "<span class='letter'>$&</span>");
-            
+        userGreet.innerHTML = userGreet.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
+        userText.innerHTML = userText.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
+        
+        let selection = document.getElementById('selection');
+debugger
+        let delayTime = 30;
+        // if (selection.value === "./src/public/music/brainwaves.mp3") {
+        //     delayTime  = (600000/combinedChars);
+debugger
+        // };
+
         anime.timeline({loop: false})
         .add({
-          targets: '#user-output-greet .letter',
-          translateY: [100,0],
-          translateZ: 0,
-          opacity: [0,1],
-          easing: "easeOutExpo",
-          duration: 1400,
-          delay: (el, i) => 300 + 30 * i
+            targets: '.letters',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            // duration: 1200,
+            delay: (el, i) => delayTime * i
         })
-        // .add({
-        //     targets: '#user-output-greet .letter',
-        //     translateY: [0,-100],
-        //     opacity: [1,0],
-        //     easing: "easeInExpo",
-        //     duration: 1200,
-        //     delay: (el, i) => 100 + 30 * i
-        // })
-        .add({
-            targets: '#user-output-words .letter',
-            translateY: [100,0],
-            translateZ: 0,
-            opacity: [0,1],
-            easing: "easeOutExpo",
-            duration: 1400,
-            delay: (el, i) => 300 + 30 * i
-          })
-        //   .add({
-        //       targets: '#user-output-words .letter',
-        //       translateY: [0,-100],
-        //       opacity: [1,0],
-        //       easing: "easeInExpo",
-        //       duration: 1200,
-        //       delay: (el, i) => 100 + 30 * i
-        //   });
     }
 
     const player = document.getElementById('player');

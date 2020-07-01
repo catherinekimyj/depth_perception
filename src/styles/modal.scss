@@ -20,13 +20,13 @@ form {
   margin: 0 auto;
   opacity: 0.8 !important;
   height: 65%;
-  width: 70%;
+  width: 40%;
   border-radius: 25px;
   border: 1px solid #888;
   display: block;
   position: absolute;
   top: 15%;
-  left: 15%;
+  left: 30%;
 }
 
 .modal-inner {
@@ -137,7 +137,7 @@ form {
   }
 
   .user-form-name {
-    margin: 10px;
+    margin: 15px;
     margin-top: 20px;
     font-size: 14px;
   }
@@ -150,7 +150,7 @@ form {
 
 
   #name-input {
-    width: 54%;
+    width: 85%;
     height: 40px;
     border-radius: 25px;
     font-family: 'Palanquin', sans-serif;
@@ -187,7 +187,7 @@ form {
 
   #thought-input {
     padding: 15px;
-    width: 50%;
+    width: 80%;
     height: 40%;
     margin: 0 auto;
     border-radius: 25px;
@@ -222,7 +222,7 @@ form {
   }
 
   #user-button {
-    width: 54%;
+    width: 40%;
     padding: 3px;
     height: 47px;
     border-radius: 25px;
@@ -300,6 +300,22 @@ form {
     padding-right: 9px;
     top: -10px;
     right: -10px;
+    transition: 1s;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .modal-content {
+    width: 70%;
+    left: 15%;
+    transition: 1s;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .modal-content {
+    width: 40%;
+    left: 30%;
     transition: 1s;
   }
 }

@@ -29,6 +29,10 @@ class Form {
         
         nameBtn.onclick = (e) => {
             e.preventDefault();
+            let userGreet = document.getElementById('user-output-greet');
+            let userText = document.getElementById('user-output-words');
+            userGreet.style.display === "none";
+            userText.style.display === "none";
 
             // variables for name and thought inputs //
             let name = nameInput.value;
@@ -40,22 +44,45 @@ class Form {
                 namePart.charAt(0).toUpperCase() + namePart.slice(1));
             let capitalized = capitalizedArr.join(" ");
 
+            function animateInputIn() {
+                let userGreet = document.getElementById('user-output-greet');
+                let userText = document.getElementById('user-output-words');
+                userGreet.style.display === "inline-block";
+                userText.style.display === "inline-block";
+        debugger
+                userGreet.innerHTML = userGreet.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
+                userText.innerHTML = userText.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
+                    
+                anime.timeline({ loop: false })
+                .add({
+                  targets: '.letters',
+                  translateY: [100,0],
+                  translateZ: 0,
+                  opacity: [0,1],
+                  easing: "easeOutExpo",
+                //   duration: 1000,
+                  delay: (el, i) => 30 * i
+                })
+            };
+
             // meditation phrases and encouragements to be selected at random //
             // const encouragements = [] <<--- input phrases here, then uncomment
             // const encouragement = encouragements[Math.floor(Math.random() * items.length)];
 
             if (obj["name"] !== "") {
                 document.getElementById("user-output-greet").innerHTML = "Welcome, " + capitalized;
-                // this.animateInput();
+                animateInputIn();
             } else {
                 document.getElementById("user-output-greet").innerHTML = "Hi, there.";
-                // this.animateInput();
+                animateInputIn();
             }
 
             if (obj["thought"] !== "") {
                 document.getElementById("user-output-words").innerHTML = obj["thought"];
+                animateInputIn();
             } else {
                 document.getElementById("user-output-words").innerHTML = "Your goal is not to battle with the mind, but to witness the mind.";
+                animateInputIn();
                 // document.getElementById("user-output-words").innerHTML = encouragement;
 
             }
