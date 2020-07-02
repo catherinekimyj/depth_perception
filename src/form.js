@@ -110,10 +110,8 @@ class Form {
                 document.getElementById("user-output-words").innerHTML = obj["thought"];
                 animateInputIn();
             } else {
-                // document.getElementById("user-output-words").innerHTML = "Your goal is not to battle with the mind, but to witness the mind.";
                 document.getElementById("user-output-words").innerHTML = encouragement;
                 animateInputIn();
-
             }
             
             modal.style.display = "none";
