@@ -76,7 +76,7 @@ introduction:active {
     border-radius: 25px;
     width: 250px;
     top: -45px;
-    animation: fadeInInfo ease 3.5s;
+    animation: fadeInInfo ease .5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;  
 }
@@ -202,4 +202,41 @@ introduction:active {
         height: 90%;
         top: 5%;
     }
+}
+
+#footer-name {
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Palanquin', sans-serif;
+    position: absolute;
+    bottom: 3px;
+}
+
+#footer-name a {
+    color: white;
+    font-weight: bold;
+    font-family: 'Palanquin Dark';
+    text-decoration: none;
+    transition: 1s;
+}
+
+#footer-name a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#footer-name a:hover {
+    color: white;
+    font-size: 11px;
+    transition: 1s;
+    text-decoration: none;
+}
+
+#footer-name a:active {
+    color: white;
+    text-decoration: none;
 }
