@@ -63,6 +63,7 @@ ul li {
 li a:link {
     color: black;
     cursor: pointer;
+    z-index: 9999;
 } 
 
 @media only screen and (max-width: 900px) {
@@ -79,13 +80,13 @@ li a:link {
     }
 }
 
-#myBtn:hover {
+#myBtn:hover .form-button {
     transition: 1.5s;
     transform: rotateY(360deg);
     cursor: pointer;
 } 
 
-#myGithub:hover {
+#myGithub:hover .github-button {
     transition: 1.5s;
     transform: rotateX(360deg);
 }
