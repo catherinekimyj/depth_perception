@@ -14,6 +14,7 @@
     animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    z-index: 9997;
 }
 
 @keyframes fadeInAnimation { 
@@ -33,7 +34,6 @@
     list-style: none;
     padding: 0;
     height: 70%;
-
     position: absolute;
     top: 12%;
     left: -150%;
@@ -41,6 +41,7 @@
     -webkit-animation-delay: 2s;
     animation: slide 3s forwards;
     animation-delay: 2s;
+    z-index: 9998;
 }
 
 @-webkit-keyframes slide {
@@ -56,6 +57,7 @@ ul li {
     font-size: max(30px);
     color: black;
     cursor: pointer;
+    z-index: 9999;
 }
 
 li a:link {

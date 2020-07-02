@@ -60,12 +60,29 @@ introduction:active {
 
 @-webkit-keyframes glow {
     from {
-      text-shadow: 0 0 5px #fff, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white;
+        text-shadow: 0 0 5px #fff, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white; 
     }
     
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;
+        text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white; 
     }
+}
+
+.stay-hovered {
+    display: block;
+    margin: auto;
+    position: absolute;
+    background-color: white;
+    border-radius: 25px;
+    width: 250px;
+    top: -45px;
+    animation: fadeInInfo ease 3.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;  
+}
+
+.stay-hovered-i {
+    font-size: 12px;
 }
 
 .introduction:hover + .hide {
@@ -76,11 +93,10 @@ introduction:active {
     background-color: white;
     position: absolute;
     text-align: center;
-    top: 18%;
-    left: 23%;
-    width: 38%;
-    height: 30%;
-    padding: 8%;
+    top: 25%;
+    left: 22.5%;
+    width: 55%;
+    height: 50%;
     border-radius: 25px;
     border: solid 1.5px black;
     font-size: 14px;
@@ -93,6 +109,15 @@ introduction:active {
     animation: fadeInInfo ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+#introduction-container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #introduction-header {
@@ -112,29 +137,69 @@ introduction:active {
 
 .hide {
     transition: all 1s ease-out;
-}
-
-.introduction + .hide {
+    opacity: 0;
     -webkit-transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
     -ms-transition: all 1s ease-out;
-    transition: all 1s ease-out;
+}
+
+.introduction + .hide {
+    opacity: 0;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
 }
 
 @media only screen and (max-width: 1000px) {
     .introduction:hover + .hide {
         width: 70%;
-        left: 7%;
-        height: 60%;
-        top: 15%;
-        font-size: 12px;
-        font-weight: extra-bold;
+        left: 15%;
+        height: 45%;
+        top: 22.5%;
+        font-size: 13px;
+        transition: 1s;
     }
 }
 
 @media only screen and (max-width: 1000px) {
     #introduction-header {
-        font-size: 20px;
+        font-size: 28px;
+        transition: 1s;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .introduction:hover + .hide {
+        font-size: 12px;
+        transition: 1s;
+    }
+}
+
+@media only screen and (max-height: 875px) {
+    .introduction:hover + .hide {
+        font-size: 12px;
+        transition: 1s;
+        height: 70%;
+        top: 15%;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .introduction:hover + .hide {
+        font-size: 11.5px;
+        line-height: 1.5;
+        transition: 1s;
+    }
+}
+
+@media only screen and (max-height: 325px) {
+    .introduction:hover + .hide {
+        font-size: 11.5px;
+        line-height: 1.4;
+        transition: 1s;
+        height: 90%;
+        top: 5%;
     }
 }

@@ -1,7 +1,7 @@
 import './styles/index.scss';
 import './styles/modal.scss';
 import './styles/navbar.scss';
-import './styles/user_content.scss';
+import './styles/canvas.scss';
 import Modal from './modal';
 import Form from './form';
 // import Player from './player';
