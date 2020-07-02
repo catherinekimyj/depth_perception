@@ -5,16 +5,17 @@ form {
 }
 
 .modal {
-    position: fixed; /* Stay in place */
+    position: absolute; /* Stay in place */
+    display: block;
+    top: 0;
     z-index: 1; /* Sit on top */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     margin: 0 auto;
-    transition: 1s;
-  }
-  
+}
+
   /* Modal Content */
 .modal-content {
   background-color: #fefefe;
@@ -29,6 +30,7 @@ form {
   top: 15%;
   left: 30%;
   transition: 1s;
+  animation: createBox 1s;
 }
 
 .modal-inner {
@@ -42,14 +44,6 @@ form {
   width: 100%;
 }
 
-.showModal {
-  animation: createBox 1s;
-}
-
-.hideModal {
-  animation: closeBox 1s;
-}
-
 @keyframes createBox {
   from {
     transform: scale(0);
@@ -61,10 +55,10 @@ form {
 
 @keyframes closeBox {
   from {
-    transform: opacity(.6);
+    transform: scale(1);
   }
   to {
-    transform: opacity(0);
+    transform: scale(0);
   }
 }
   
@@ -100,6 +94,7 @@ form {
   
   #user-greeting {
     font-family: 'Marck Script';
+    z-index: 999;
   }
   
   #user-form-description {

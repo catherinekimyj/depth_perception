@@ -13,6 +13,128 @@
     width: 28%;
     font-size: 12px;
     font-family: 'Palanquin', sans-serif;
+    font-weight: 700;
     opacity: 0.65;
     border: none;
+}
+
+/* introduction */
+.hide {
+    display:none;
+}
+
+.introduction {
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    z-index: 9999;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.introduction:hover {
+    transition: 1.2s;
+    color: white;
+    background-color: rgba(189, 152, 167, 0.9);
+    border: 2px solid white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+introduction:focus {
+    cursor: pointer;
+}
+
+introduction:active {
+    cursor: pointer;
+}
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 25px white, 0 0 30px white, 0 0 35px white;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;
+    }
+}
+
+.introduction:hover + .hide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: rgba(189, 152, 167, 0.95);*/
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    top: 18%;
+    left: 23%;
+    width: 38%;
+    height: 30%;
+    padding: 8%;
+    border-radius: 25px;
+    border: solid 1.5px black;
+    font-size: 14px;
+    font-family: 'Palanquin', sans-serif;
+    font-weight: bold;
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    transition: 1s;
+    animation: fadeInInfo ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#introduction-header {
+    font-size: 30px;
+    font-family: 'Marck Script';
+}
+
+@keyframes fadeInInfo { 
+    0% { 
+        opacity: 0; 
+    } 
+
+    100% { 
+        opacity: 1; 
+    } 
+}
+
+.hide {
+    transition: all 1s ease-out;
+}
+
+.introduction + .hide {
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+@media only screen and (max-width: 1000px) {
+    .introduction:hover + .hide {
+        width: 70%;
+        left: 7%;
+        height: 60%;
+        top: 15%;
+        font-size: 12px;
+        font-weight: extra-bold;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #introduction-header {
+        font-size: 20px;
+    }
 }

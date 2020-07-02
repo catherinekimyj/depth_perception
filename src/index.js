@@ -14,10 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
 
-debugger
-
     const modal = new Modal(canvas);
-    // const space = new Space(canvas);
     const form = new Form();
 
     function animateInput() {
@@ -27,13 +24,12 @@ debugger
         let userTextTime = userText.innerText.length;
         let combinedChars = userTextTime + userGreetTime;
 
-debugger
         userGreet.innerHTML = userGreet.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
         userText.innerHTML = userText.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
         
         let selection = document.getElementById('selection');
-debugger
         let delayTime = 30;
+
         if (selection.value === "./src/public/music/brainwaves.mp3") {
             delayTime  = ((600000)/combinedChars);
         } else if (selection.value === "./src/public/music/ocean_waves.mp3") {
@@ -56,7 +52,6 @@ debugger
 
     const player = document.getElementById('player');
     player.addEventListener("play", () => {
-debugger
         console.log("play");
         animateInput(); 
     });

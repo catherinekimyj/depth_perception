@@ -2,40 +2,40 @@ import Form from './form';
 
 class Modal {
     constructor(canvas) {
+debugger
         this.closeModal();
         this.openModal();
     }
 
     closeModal() {
         const modal = document.getElementById('myModal');
-        const modalContent = document.getElementsByClassName('modal-content');
         const closeBttn = document.getElementById("close");
 
         closeBttn.onclick = function() {
-    debugger
+debugger
+            modal.classList.remove('showModal');
             modal.style.display = "none";
-            // modalContent.classList.remove('hideModal');
-            // modalContent.classList.add('hideModal');
         }
 
         window.onclick = function(event) {
 debugger
             if (event.target == modal) {
-            modal.style.display = "none";
+                modal.style.display = "none";
+                // modal.classList.remove('showModal');
+                // modal.classList.remove('showModal');
             }
         }
     };
 
     openModal() {
         const modal = document.getElementById('myModal');
-        const modalContent = document.getElementsByClassName('modal-content');
         const btn = document.getElementById('myBtn');
         
         btn.onclick = function() {
     // debugger
             modal.style.display= "block";
             // modalContent.classList.add('showModal');
-            // modalContent.classList.remove('hideModal');
+            // modal.classList.remove('showModal');
         }
         
     //     closeBttn.onclick = function() {

@@ -79,7 +79,7 @@ class Form {
             let e1 = '"Your goal is not to battle with the mind, but to witness the mind." - Swami Muktananda';
 
             const encouragements = [
-                '"Your goal is not to battle with the mind, but to witness the mind." - Swami Muktananda',
+                ' "Your goal is not to battle with the mind, but to witness the mind." - Swami Muktananda',
                 '"To understand the immeasurable, the mind must be extraordinarily quiet, still. - Jiddu Krishnamurti"',
                 '"We\'re all just walking each other home" - Ram Dass',
                 '"The quieter you become, the more you can hear." - Ram Dass',
@@ -112,6 +112,7 @@ class Form {
             }
             
             modal.style.display = "none";
+            // modal.classList.add("hideModal");
             // console.log(obj);
         }
     }

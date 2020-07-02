@@ -12,7 +12,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet">
     </head>
     <body>
-<!-- navbar -->
+
+    <!-- instroduction -->
+        <div class="introduction">
+                <i class="fas fa-info"></i>
+        </div>
+
+        <div class="hide">
+            <div id="introduction-header">Welcome to Depth Perception</div>
+            <br/>
+            Depth Perception is a meditation visualization app that allows you to write down the thoughts that manifest your mind and visualize letting go.
+            <br/>
+            <br/>
+            There is a space for your name and a space for you to write down your thoughts. Neither fields are required.
+            <br/>
+            <br/>
+            If there isn't much to say, you'll see that there is a message of mindfulness and meditation from us.
+            Choose a sound of your liking and watch your thoughts dissipate over the duration of the music.
+            The speed of dissipation depends on the length of your thought and the length of the chosen sound.
+            <br/>
+        </div>
+
+    <!-- navbar -->
         <div class="wrapper">
             <nav class="navbar">
                  <ul>
@@ -25,8 +46,8 @@
         </div>
         
         <!-- modal start -->
-        <div id="myModal" class="modal">
-            <div class="modal-content showModal">
+        <div id="myModal" class="modal showModal">
+            <div class="modal-content">
                 <span class="close" id="close"><i class="fas fa-times"></i></span>
                 <p class="user-form-welcome">
                     <h1 class="ml16">
@@ -86,7 +107,7 @@
                 <br/>
 
                 <audio id="player" controls="controls">
-                    <source id="mp3_src" src="./src/public/music/brainwaves.mp3" type="audio/mp3" />
+                    <source id="mp3_src" src="./src/public/music/30_sec.mp3" type="audio/mp3" />
                 </audio>
             </section>
 
