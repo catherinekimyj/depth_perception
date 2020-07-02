@@ -30,7 +30,7 @@ Below is an example of how Depth Perception adjusts to different window sizes:
 
 The Depth Perception demo loads the modal containing the form when user arrives at the page. The greeting is customized to the user's local time ("Good morning", "Good afternoon", "Good evening"). User has an input box for the name, and another to write out their thoughts. The inputs can be left blank for a customized output of a meditation quote.
 
-App Information button shows basic instructions and information. The pop-up modal containing information also has a fine print that hints of Easter eggs to find for special feature.
+App Information button at the top right corner shows basic instructions and information. The pop-up modal containing information also has a fine print that hints of Easter eggs to find for the special feature.
 
 ![image info](./src/public/images/wireframe_modal.jpg)
 
