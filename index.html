@@ -38,6 +38,9 @@
                     If there isn't much to say (leave the thought field blank), you will see that there is a randomly selected message of mindfulness and meditation from us upon submitting the form (like a fontune cookie!).
                     Choose a sound of your liking and watch your thoughts dissipate over the duration of the music.
                     The speed of dissipation will depend on the length of your thought and the length of the chosen sound.
+                    <br/>
+                    <br/>
+                    <span id="easter-egg-message">Can you find the hidden easter eggs for a special feature?&nbsp;&nbsp;<i class="fas fa-egg"></i></span>
                 </div>
             </div>
 
@@ -103,11 +106,26 @@
                     player.setAttribute("src", selection.value);
                     player.load();
                 }
+
+                function easterEgg1() {
+                    let canvas = document.getElementById('canvas');
+                    canvas.style.backgroundImage="url(./src/public/images/beach.jpg)";
+                }
+
+                function easterEgg2() {
+                    let canvas = document.getElementById('canvas');
+                    canvas.style.backgroundImage="url(./src/public/images/clouds.jpg)";
+                }
+
+                function easterEgg3() {
+                    let canvas = document.getElementById('canvas');
+                    canvas.style.backgroundImage="url(./src/public/images/forest.jpg)";
+                }
             </script>
 
             <section id="timer">
                 <select id="selection" onchange="change()">
-                    <option id="selection-option" value="">Select Your Sound</option>
+                    <option id="selection-option" value="">30 Second Breathing Room</option>
                     <option id="selection-option" value="./src/public/music/brainwaves.mp3">Serenity [10 min]</option>
                     <option id="selection-option" value="./src/public/music/ocean_waves.mp3">Ocean Waves [8 min]</option>
                     <option id="selection-option" value="./src/public/music/relaxing.mp3">Gleaming Sun [5 min]</option>
@@ -123,6 +141,9 @@
             <div id="footer-name">
                 Created by <a href="mailto: catkimyj@gmail.com" target="_blank">Catherine Kim</a>
             </div>
+            <span id="easter-egg1" onclick="easterEgg1()"><i class="fas fa-egg"></i></span>
+            <span id="easter-egg2" onclick="easterEgg2()"><i class="fas fa-egg"></i></span>
+            <span id="easter-egg3" onclick="easterEgg3()"><i class="fas fa-egg"></i></span>
 
         <script src="./dist/main.js"></script>
         <script src="./blotter.min.js"></script>

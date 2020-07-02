@@ -240,3 +240,46 @@ introduction:active {
     color: white;
     text-decoration: none;
 }
+
+#easter-egg1 {
+    color: transparent;
+    position: absolute;
+    bottom: 9%;
+    left: 29%;
+}
+
+#easter-egg1:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#easter-egg2 {
+    color: transparent;
+    position: absolute;
+    top: 1%;
+    left: 10%;
+}
+
+#easter-egg2:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#easter-egg3 {
+    color: transparent;
+    position: absolute;
+    bottom: 9%;
+    right: 16%;
+}
+
+#easter-egg3:hover {
+    color: black;
+    cursor: pointer;
+}
+
+#easter-egg-message {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Palanquin Dark';
+    font-size: 9px;
+}
