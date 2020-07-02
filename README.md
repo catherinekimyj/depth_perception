@@ -6,7 +6,7 @@
 
 Depth Perception is a meditation visualization demo that allows the user to write down thoughts that manifest their mind and visualize letting go.
 
-The words submitted by the user will slowly dissipated to the length of the chosen meditation sound. The speed of dissipation is dependent on the length of both the submitted input and the music; the animation duration is calculated so that the last bits of user input will dissolve towards the end of the track.
+The words submitted by the user will slowly dissipate to the length of the chosen meditation sound. The speed of dissipation is dependent on the length of both the submitted input and the music; the animation duration is calculated so that the last bits of user input will dissolve towards the end of the track.
 
 Depth Perception is a CSS/SCSS-heavy demonstration.
 
@@ -16,15 +16,15 @@ Depth Perception is a CSS/SCSS-heavy demonstration.
 
 * User can submit their name and 1000 character max text (current train of thought)
 * User can choose from selection of background music of varying lengths
-* If there is no text submitted, a randomly selected
-* Depending on the length of selected music
+* If there is no text submitted, a randomly selected meditation quote (from an array of quotes) will be displayed
+* Depending on the length of selected music and the length of text, animation duration will be determined
 * Multiple hidden "Easter eggs" perform a special feature (background change)
 
 ### **Wireframes** ###
 
-The Depth Perception demo loads the form modal when user arrives at the page. The greeting is customized to the user's local time ("Good morning", "Good afternoon", "Good evening"). User has an input for the name, and another to write out their thought. The inputs can be left blank for a customized output of a meditation quote.
+The Depth Perception demo loads the modal containing the form when user arrives at the page. The greeting is customized to the user's local time ("Good morning", "Good afternoon", "Good evening"). User has an input box for the name, and another to write out their thoughts. The inputs can be left blank for a customized output of a meditation quote.
 
-App Information button shows basic instructions and information. The pop-up modal containing information also has a small-text that hints of Easter eggs to find for special features.
+App Information button at the top right corner shows basic instructions and information. The pop-up modal containing information also has a fine print that hints of Easter eggs to find for the special feature.
 
 ![image info](./src/public/images/wireframe_modal.jpg)
 
@@ -43,7 +43,7 @@ Once submitted, the user is led to the main page where meditation of different l
 
 The animation that begins by an event listener on the "play" of the audio player is calculated to last over the duration of the chosen music. The following code snippet shows how the calculation was achieved.
 
-The combined character length of the name input greeting is saved to a variable. Then, the number of milliseconds of the each song is divided by the variable (storing the combined character length) to output the ratio we will use for delay time of characters and duration of each character animation. Each character is wrapped in a  ```<span>```, so that the animation can be applied individually to each character.
+The combined character length of the name-input greeting and the thought input is saved to a variable. Then, the number of milliseconds of the each song is divided by the variable (storing the combined character length) to output the ratio we will use for delay time of characters and duration of each character animation. Each character is wrapped in a  ```<span>```, so that the animation can be applied individually to each character.
 
 ```javascript
     function animateInput() {
