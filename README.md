@@ -1,6 +1,6 @@
 # Depth Perception #
 
-[Live Demo](http://https://catherinekimyj.github.io/depth-perception/)
+[Live Demo](https://catherinekimyj.github.io/depth-perception/)
 
 ### **Background and Overview** ###
 
