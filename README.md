@@ -4,7 +4,7 @@
 
 ### **Background and Overview** ###
 
-Depth Perception is a meditation visualization demo allows the user to write down the thoughts that manifest the mind and visualize letting go.
+Depth Perception is a meditation visualization demo that allows the user to write down the thoughts that manifest the mind and visualize letting go.
 
 The words submitted by the user will slowly dissipated to the length of the chosen meditation sound. The speed of dissipation is dependent on the length of both the submitted input and the music; the animation duration is calculated so that the last bits of user input will dissolve towards the end of the track.
 
