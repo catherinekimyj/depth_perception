@@ -32,11 +32,11 @@ The Depth Perception demo loads the modal containing the form when user arrives 
 
 App Information button at the top right corner shows basic instructions and information. The pop-up modal containing information also has a fine print that hints of Easter eggs to find for the special feature.
 
-![image info](./src/public/images/wireframe_modal.jpg)
+![image info](./src/public/images/wireframe_form_HQ.jpg)
 
 Once submitted, the user is led to the main page where meditation of different lengths can be selected. As shown below:
 
-![image info](./src/public/images/wireframe_main.jpg)
+![image info](./src/public/images/wireframe_main_HQ.jpg)
 
 ### **Architecture and Technology** ###
 
