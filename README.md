@@ -15,6 +15,7 @@ Depth Perception is a CSS/SCSS-heavy demonstration.
 ### **Functionality and MVPs** ###
 
 * User can submit their name and 1000 character max text (current train of thought)
+* Name input can be multipled words and is automatically capitalized
 * User can choose from selection of background music of varying lengths
 * If there is no text submitted, a randomly selected meditation quote (from an array of quotes) will be displayed
 * Depending on the length of selected music and the length of text, animation duration will be determined
