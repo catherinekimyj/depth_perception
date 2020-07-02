@@ -13,11 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById('canvas');
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
-    let userGreet = document.getElementById('user-output-greet');
-    let userText = document.getElementById('user-output-words');
-    let userGreetTime = userGreet.innerHTML.length;
-    let userTextTime = userText.innerHTML.length;
-    let combinedChars = userTextTime + userGreetTime;
+
 debugger
 
     const modal = new Modal(canvas);
@@ -27,9 +23,10 @@ debugger
     function animateInput() {
         let userGreet = document.getElementById('user-output-greet');
         let userText = document.getElementById('user-output-words');
-        // let userGreetTime = userGreet.innerHTML.length;
-        // let userTextTime = userText.innerHTML.length;
-        // let combinedChars = userTextTime + userGreetTime;
+        let userGreetTime = userGreet.innerText.length;
+        let userTextTime = userText.innerText.length;
+        let combinedChars = userTextTime + userGreetTime;
+
 debugger
         userGreet.innerHTML = userGreet.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
         userText.innerHTML = userText.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
@@ -37,19 +34,23 @@ debugger
         let selection = document.getElementById('selection');
 debugger
         let delayTime = 30;
-        // if (selection.value === "./src/public/music/brainwaves.mp3") {
-        //     delayTime  = (600000/combinedChars);
-debugger
-        // };
+        if (selection.value === "./src/public/music/brainwaves.mp3") {
+            delayTime  = ((600000)/combinedChars);
+        } else if (selection.value === "./src/public/music/ocean_waves.mp3") {
+            delayTime = ((489000)/combinedChars);
+        } else if (selection.value === "./src/public/music/relaxing.mp3") {
+            delayTime = ((304000)/combinedChars)
+        } else {
+            delayTime = ((30000)/combinedChars)
+        }
 
         anime.timeline({loop: false})
         .add({
             targets: '.letters',
-            translateY: [0,-100],
             opacity: [1,0],
             easing: "easeInExpo",
-            // duration: 1200,
-            delay: (el, i) => delayTime * i
+            duration: delayTime,
+            delay: (el, i) => delayTime * (i * 1.23)
         })
     }
 

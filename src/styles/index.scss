@@ -41,16 +41,38 @@ html, body {
 }
 
 #user-output-greet {
-    font-size: 40px;
+    font-size: 44px;
     font-family: 'Marck Script';
 }
 
 #user-output-words {
-    font-size: 14.5px;
+    font-size: 15.5px;
+    font-weight: bold;
     font-family: 'Palanquin', sans-serif;
-    max-width: 70%;
+    max-width: 450px;
     max-height: 70%;
     text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    #user-output-words {
+      width: 380px;
+      transition: 1s;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    #user-output-words {
+      font-size: 13.5px;
+      transition: 1s;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    #user-output-words {
+      font-size: 12px;
+      transition: 1s;
+    }
 }
 
 #timer {

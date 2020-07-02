@@ -12,6 +12,7 @@ form {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     margin: 0 auto;
+    transition: 1s;
   }
   
   /* Modal Content */
@@ -27,6 +28,7 @@ form {
   position: absolute;
   top: 15%;
   left: 30%;
+  transition: 1s;
 }
 
 .modal-inner {
