@@ -4,8 +4,6 @@ import './styles/navbar.scss';
 import './styles/canvas.scss';
 import Modal from './modal';
 import Form from './form';
-// import Player from './player';
-import * as Util from './util';
 
 console.log("Webpack is working!");
 

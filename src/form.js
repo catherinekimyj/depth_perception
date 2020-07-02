@@ -79,7 +79,7 @@ class Form {
             let e1 = '"Your goal is not to battle with the mind, but to witness the mind." - Swami Muktananda';
 
             const encouragements = [
-                ' "Your goal is not to battle with the mind, but to witness the mind." - Swami Muktananda',
+                '"Your goal is not to battle with the mind, but to witness the mind." - Swami Muktananda',
                 '"To understand the immeasurable, the mind must be extraordinarily quiet, still. - Jiddu Krishnamurti"',
                 '"We\'re all just walking each other home" - Ram Dass',
                 '"The quieter you become, the more you can hear." - Ram Dass',
@@ -90,6 +90,11 @@ class Form {
                 '"Distractions are everywhere. Notice what takes your attention, acknowledge it, then let it go." - Headspace',
                 '"In the midst of movement and chaos, keep stillness inside of you." - Anonymous',
                 '"Life is short. We can live it lost in thought or we can choose to be present as life unfolds around us." - Headspace',
+                '"Peace cannot be kept by force it can be achieved by understanding" - Albert Einstein',
+                '"The mind can go in a thousand directions, but on this beautiful path, I walk in peace. With each step, the wind blows. With each step, a flower blooms." - Thich Nhat Hanh',
+                '"Your vision will become clear only when you look into your own heart. Who looks outside, dreams, who looks insides, awakes." - Carl Jung Carl Gustav',
+                '"You find peace not by rearranging the circumstances of your life, but by realizing who you are at the deepest level." - Eckhard Tolle',
+                '"Rule your mind or it will rule you." - Buddha'
             ];
             const encouragement = encouragements[Math.floor(Math.random() * encouragements.length)];
 
