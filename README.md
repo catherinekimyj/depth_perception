@@ -20,6 +20,7 @@ Depth Perception is a CSS/SCSS-heavy demonstration.
 * If there is no text submitted, a randomly selected meditation quote (from an array of quotes) will be displayed
 * Depending on the length of selected music and the length of text, animation duration will be determined
 * Multiple hidden "Easter eggs" perform a special feature (background change)
+* Demonstration supports various height and width of screen
 
 ### **Wireframes** ###
 
