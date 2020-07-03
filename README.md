@@ -8,8 +8,6 @@ Depth Perception is a meditation visualization demo that allows the user to writ
 
 The words submitted by the user will slowly dissipate to the length of the chosen meditation sound. The speed of dissipation is dependent on the length of both the submitted input and the music; the animation duration is calculated so that the last bits of user input will dissolve towards the end of the track.
 
-Depth Perception is a CSS/SCSS-heavy demonstration.
-
 ![](./src/public/images/depth_perception.gif)
 
 ### **Functionality and MVPs** ###
@@ -116,7 +114,7 @@ Potential features to incorporate:
 
 ### **Placements of Easter Eggs** ###
 
-* There are three Easter eggs in total.
-* **BELOW SCREENSHOT REVEALS THE LOCATIONS OF THE HIDDEN EASTER EGGS**
+* There are three Easter eggs in total
+* Below screenshot shows the placements of the eggs
 
 ![](./src/public/images/easter_eggs_shown.png)
