@@ -83,7 +83,7 @@ class Form {
                 '"To understand the immeasurable, the mind must be extraordinarily quiet, still. - Jiddu Krishnamurti"',
                 '"We\'re all just walking each other home" - Ram Dass',
                 '"The quieter you become, the more you can hear." - Ram Dass',
-                '"You\'re problem is that you\'re too busy holding onto your unworthiness." - Ram Dass',
+                '"Your problem is that you\'re too busy holding onto your unworthiness." - Ram Dass',
                 '"Mindfulness practice means that we commit fully in each moment to be present; inviting ourselves to interface with this moment in full awareness, with the intention to embody as best we can an orientation of calmness, mindfulness, and equanimity right here and right now." - Jon Kabat-Zinn',
                 '"Brilliant things happen in calm minds. Be calm. You\'re brilliant." - Headspace',
                 '"Remember the blue sky. It may at times be obscured by clouds, but it is always there." - Andy Puddicombe',
