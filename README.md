@@ -110,11 +110,4 @@ The sum of character lengths of the name-input greeting and the thought input is
 
 #### **Bonus Features** ####
 Potential features to incorporate:
-* Easter eggs hidden around the screen offer a special feature of changing backgrounds
-
-### **Placements of Easter Eggs** ###
-
-* There are three Easter eggs in total
-* Below screenshot shows the placements of the eggs
-
-![](./src/public/images/easter_eggs_shown.png)
+* User can change background
