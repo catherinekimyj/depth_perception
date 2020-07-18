@@ -110,4 +110,4 @@ The sum of character lengths of the name-input greeting and the thought input is
 
 #### **Bonus Features** ####
 Potential features to incorporate:
-* User can change background
+* User can change background on settings
