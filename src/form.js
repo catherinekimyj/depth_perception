@@ -26,12 +26,6 @@ class Form {
         const modal = document.getElementById('myModal');
         const span = document.getElementsByClassName("close")[0];
         const obj = {};
-
-        // span.onclick = (e) => {
-        //     e.preventDefault();
-
-        //     modal.style.opacity(0);
-        // }
         
         nameBtn.onclick = (e) => {
             e.preventDefault();
@@ -53,11 +47,7 @@ class Form {
             function animateInputIn() {
                 let userGreet = document.getElementById('user-output-greet');
                 let userText = document.getElementById('user-output-words');
-                // not using below anymore
-                // let userGreetTime = userGreet.innerText.length;
-                // let userTextTime = userText.innerText.length;
-                // let combinedChars = userTextTime + userGreetTime;
-                // let timed = 5000/combinedChars;
+
                 userGreet.style.display === "inline-block";
                 userText.style.display === "inline-block";
         debugger
@@ -121,7 +111,6 @@ class Form {
     }
     
     animateGreeting() {
-        // debugger
         let textWrapper = document.querySelector('.ml16');
         textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 

@@ -14,40 +14,38 @@
     </head>
     <body>
 
-    <!-- instroduction -->
-        <div class="introduction">
-                <i class="fas fa-info"></i>
+        <!-- information modal start -->
+        <div id="myInfoModal" class="infoModal">
+            <div class="info-modal-content">
+                <span class="close-info" id="close-info"><i class="fas fa-times"></i></span>
+                <section class="modal-inner">
+                    
+                    <!-- information -->
+                    <div id="introduction-container">
+                        <div id="introduction-header">Welcome to Depth Perception</div>
+                        <br/>
+                        Depth Perception is a meditation visualization app that allows you to write down the thoughts that manifest your mind and visualize letting go.
+                        <br/>
+                        <br/>
+                        There is a space for your name and a place for you to write down your train of thoughts.
+                        <br/>Neither fields are required, and no information is ever stored.
+                        <br/>
+                        <br/>
+                        If the thought field is left blank, you will see  a randomly selected message of mindfulness and meditation from us upon submitting the form.
+                        Choose a sound of your liking and watch your thoughts dissipate over the duration of the music.
+                        The speed of dissipation will depend on the length of your thought and the length of the chosen sound.
+                    </div>
+                    
+                </section>
+            </div>
         </div>
-
-
-        <div class="hide">
-            <div class="stay-hovered">
-                <span class="stay-hovered-i"><i class="fas fa-info"></i></span>&nbsp;&nbsp;&nbsp;Stay hovered to view information.
-            </div>
-    
-                <div id="introduction-container">
-                    <div id="introduction-header">Welcome to Depth Perception</div>
-                    <br/>
-                    Depth Perception is a meditation visualization app that allows you to write down the thoughts that manifest your mind and visualize letting go.
-                    <br/>
-                    <br/>
-                    There is a space for your name and a place for you to write down your train of thoughts.
-                    <br/>Neither fields are required, and no information is ever stored.
-                    <br/>
-                    <br/>
-                    If the thought field is left blank, you will see  a randomly selected message of mindfulness and meditation from us upon submitting the form (like a fontune cookie!).
-                    Choose a sound of your liking and watch your thoughts dissipate over the duration of the music.
-                    The speed of dissipation will depend on the length of your thought and the length of the chosen sound.
-                    <br/>
-                    <br/>
-                    <span id="easter-egg-message">Can you find the hidden easter eggs for a special feature?&nbsp;&nbsp;<i class="fas fa-egg"></i></span>
-                </div>
-            </div>
+        <!-- information modal end -->
 
     <!-- navbar -->
         <div class="wrapper">
             <nav class="navbar">
                  <ul>
+                    <li id="myInformation"><div class="inform-button" onclick="ModalInfo.openModal()"><i class="fas fa-info" id="info-button"></i></div></li>
                     <li id="myBtn"><div class="form-button"><i class="far fa-comment-dots"></i></div></li>
                     <li id="myGithub"><div class="github-button"><a href="https://github.com/catherinekimyj/" target="_blank"><i class="fab fa-github"></i></a></div></li>
                     <li id="myLinkedin"><a href="https://www.linkedin.com/in/catherinekimyj/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
@@ -107,17 +105,22 @@
                     player.load();
                 }
 
-                function easterEgg1() {
+                function changeBg() {
+                    let canvas = document.getElementById('canvas');
+                    canvas.style.backgroundImage="url(./src/public/images/bg.jpg)";
+                }
+
+                function changeBgBeach() {
                     let canvas = document.getElementById('canvas');
                     canvas.style.backgroundImage="url(./src/public/images/beach.jpg)";
                 }
 
-                function easterEgg2() {
+                function changeBgMt() {
                     let canvas = document.getElementById('canvas');
                     canvas.style.backgroundImage="url(./src/public/images/clouds.jpg)";
                 }
 
-                function easterEgg3() {
+                function changeBgForest() {
                     let canvas = document.getElementById('canvas');
                     canvas.style.backgroundImage="url(./src/public/images/forest.jpg)";
                 }
@@ -125,7 +128,8 @@
 
             <section id="timer">
                 <select id="selection" onchange="change()">
-                    <option id="selection-option" value="">30 Second Breathing Room</option>
+                    <option id="selection-option" value="">Select Your Sound</option>
+                    <option id="selection-option" value="./src/public/music/30_sec.mp3">30 Second Breathing Room</option>
                     <option id="selection-option" value="./src/public/music/brainwaves.mp3">Serenity [10 min]</option>
                     <option id="selection-option" value="./src/public/music/ocean_waves.mp3">Ocean Waves [8 min]</option>
                     <option id="selection-option" value="./src/public/music/relaxing.mp3">Gleaming Sun [5 min]</option>
@@ -133,17 +137,21 @@
                 <br/>
 
                 <audio id="player" controls="controls">
-                    <source id="mp3_src" src="./src/public/music/30_sec.mp3" type="audio/mp3" />
+                    <source id="mp3_src" src="" type="audio/mp3" />
                 </audio>
+            </section>
+
+            <section id="background-container">
+                <span id="main-bg" onclick="changeBg()"><i class="fas fa-sun"></i></span>
+                <span id="beach-bg" onclick="changeBgBeach()"><i class="fas fa-umbrella-beach"></i></span>
+                <span id="mountain-bg" onclick="changeBgMt()"><i class="fas fa-mountain"></i></span>
+                <span id="forest-bg" onclick="changeBgForest()"><i class="fas fa-tree"></i></span>
             </section>
 
             <!-- footer -->
             <div id="footer-name">
                 Created by <a href="mailto: catkimyj@gmail.com" target="_blank">Catherine Kim</a>
             </div>
-            <span id="easter-egg1" onclick="easterEgg1()"><i class="fas fa-egg"></i></span>
-            <span id="easter-egg2" onclick="easterEgg2()"><i class="fas fa-egg"></i></span>
-            <span id="easter-egg3" onclick="easterEgg3()"><i class="fas fa-egg"></i></span>
 
         <script src="./dist/main.js"></script>
         <script src="./blotter.min.js"></script>

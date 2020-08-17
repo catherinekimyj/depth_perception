@@ -21,9 +21,10 @@
     0% { 
         opacity: 0; 
     } 
+    
     100% { 
         opacity: 0.65; 
-     } 
+    } 
 } 
 
 .navbar ul {
@@ -49,7 +50,7 @@
 }
 
 @keyframes slide {
-    100% { left: 18%; }
+    100% { left: 19%; }
 }
 
 ul li {
@@ -80,9 +81,19 @@ li a:link {
     }
 }
 
+.inform-button {
+    font-size: 26px;
+}
+
+#myInformation:hover .inform-button {
+    transition: 1.5s;
+    transform: rotateZ(-360deg);
+    cursor: pointer;
+}
+
 #myBtn:hover .form-button {
     transition: 1.5s;
-    transform: rotateY(360deg);
+    transform: rotateZ(360deg);
     cursor: pointer;
 } 
 
@@ -93,7 +104,7 @@ li a:link {
 
 #myLinkedin:hover {
     transition: 1.5s;
-    transform: rotateZ(360deg);
+    transform: rotateY(360deg);
 }
 
 #myangel:hover {

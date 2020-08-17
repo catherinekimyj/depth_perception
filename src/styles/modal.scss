@@ -24,7 +24,27 @@ form {
   height: 65%;
   width: 40%;
   border-radius: 25px;
-  border: 1px solid #888;
+  border: none;
+  display: block;
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  transition: 1s;
+  animation: createBox 1s;
+}
+
+#myInfoModal {
+  display: none;
+}
+
+.info-modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  opacity: 0.8 !important;
+  height: 65%;
+  width: 40%;
+  border-radius: 25px;
+  border: 0px solid #888;
   display: block;
   position: absolute;
   top: 15%;
@@ -84,6 +104,35 @@ form {
   
   .close:hover,
   .close:focus {
+    transition: 1.2s;
+    color: white;
+    background-color: rgba(189, 152, 167, 0.9);
+    border: 2px solid white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .close-info {
+    color: black;
+    font-family: Lato;
+    float: right;
+    font-size: 16px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: white;
+    padding: 9px;
+    padding-left: 13px;
+    padding-right: 13px;
+    position: relative;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 1.2s;
+  }
+  
+  .close-info:hover,
+  .close-info:focus {
     transition: 1.2s;
     color: white;
     background-color: rgba(189, 152, 167, 0.9);
