@@ -5,7 +5,6 @@ import './styles/canvas.scss';
 import Modal from './modal';
 import ModalInfo from './modal_info';
 import Form from './form';
-import Animation from './animation';
 import anime from 'animejs/lib/anime.es.js';
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -16,28 +15,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const modal = new Modal(canvas);
     const modalInfo = new ModalInfo(canvas);
     const form = new Form();
-    const animation = new Animation();
-
-        // let animation = anime.timeline({loop: false})
-        // .add({
-        //     targets: '.letters',
-        //     opacity: [1,0],
-        //     // translateX: 250,
-        //     easing: "easeInExpo",
-        //     duration: delayTime,
-        //     delay: (el, i) => delayTime * (i * 1.23)
-        // })
-
-        // anime({
-        //     targets: '.letters',
-        //     translateX: 270,
-        //     direction: 'normal',
-        //     loop: true,
-        //     autoplay: false,
-        //     easing: 'easeInExpo',
-        //     duration: delayTime,
-        //     delay: (el, i) => delayTime * (i * 1.23)
-        // })
 
     let textAnimation;
 
@@ -73,12 +50,12 @@ window.addEventListener("DOMContentLoaded", () => {
         textAnimation = anime.timeline({loop: false})
         .add({
             targets: '.letters',
-            opacity: [1,0],
-            // translateX: 250,
+            opacity: [1, 0],
             easing: "easeInExpo",
-            duration: 2500,
-            autoplay: true,
-            delay: (el, i) => delayTime * (i * 1.1)
+            duration: 3000,
+            autoplay: false,
+            direction: 'normal',
+            delay: (el, i) => delayTime * (i * 1.05)
         });
       }
 
@@ -86,14 +63,17 @@ window.addEventListener("DOMContentLoaded", () => {
         player.addEventListener("play", () => {
           debugger;
           console.log("playing");
-          anim();
-          textAnimation.play();
+          if (player.currentTime === 0) {
+            anim();
+            textAnimation.play();
+          } else {
+            textAnimation.play();
+          }
         });
         
         player.addEventListener("pause", () => {
           debugger;
           console.log("paused");
           textAnimation.pause();
-        //   animation.pause();
         });
 });
