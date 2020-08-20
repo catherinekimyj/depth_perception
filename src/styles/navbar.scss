@@ -127,3 +127,8 @@ li:visited {
 li a:visited {
     color: black;
 }
+
+#background-container > span:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}

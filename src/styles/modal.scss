@@ -106,7 +106,7 @@ form {
   .close:focus {
     transition: 1.2s;
     color: white;
-    background-color: rgba(189, 152, 167, 0.9);
+    background-color: rgba(232, 240, 254, 0.9);
     border: 2px solid white;
     text-decoration: none;
     cursor: pointer;
@@ -133,9 +133,9 @@ form {
   
   .close-info:hover,
   .close-info:focus {
-    transition: 1.2s;
+    transition: 0.5s;
     color: white;
-    background-color: rgba(189, 152, 167, 0.9);
+    background-color: rgba(232, 240, 254, 0.9);
     border: 2px solid white;
     text-decoration: none;
     cursor: pointer;
@@ -173,7 +173,7 @@ form {
   }
 
   .user-form-inner::-webkit-scrollbar-thumb {
-    background: rgba(189, 152, 167, 0.3);
+    background: rgba(232, 240, 254, 0.3);
     border-radius: 10px;
     height:10px;
   }
@@ -204,8 +204,8 @@ form {
     text-align: center;
     margin: 0 auto;
     outline: none;
-    border: none;
-    background-color: rgba(189, 152, 167, 0.2);
+    border: 1px solid rgba(232, 240, 254, 1);
+    background-color: rgba(232, 240, 254, 0.2);
     overflow-wrap: normal;
     padding: 3px;
     transition: 1s;
@@ -214,20 +214,23 @@ form {
   #name-input:active {
     transition: 1s;
     outline: none;
-    background-color: rgba(189, 152, 167, 0.7);
+    border: 1px solid rgba(232, 240, 254, 1);
+    background-color: rgba(232, 240, 254, 0.7);
     caret-color: white;
   }
 
   #name-input:focus {
     outline: none;
-    background-color: rgba(189, 152, 167, 0.7);
+    border: 1px solid rgba(232, 240, 254, 1);
+    background-color: rgba(232, 240, 254, 0.7);
     caret-color: white;
   }
 
   #name-input:hover {
     transition: 1s;
     outline: none;
-    background-color: rgba(189, 152, 167, 0.7);
+    border: 1px solid rgba(232, 240, 254, 1);
+    background-color: rgba(232, 240, 254, 0.7);
     caret-color: white;
   }
 
@@ -241,30 +244,33 @@ form {
     font-size: 16px;
     text-align: center;
     outline: none;
-    border: none;
+    border: 1px solid rgba(232, 240, 254, 1);;
     resize: none;
-    background-color: rgba(189, 152, 167, 0.2);
+    background-color: rgba(232, 240, 254, 0.2);
     transition: 1s;
   }
 
   #thought-input:active {
     transition: 1s;
     outline: none;
-    background-color: rgba(189, 152, 167, 0.7);
-    caret-color: white;
+    border: 1px solid rgba(232, 240, 254, 1);
+    background-color: rgba(232, 240, 254, 0.7);
+    caret-color: black;
   }
 
   #thought-input:focus {
     outline: none;
-    background-color: rgba(189, 152, 167, 0.7);
-    caret-color: white;
+    border: 1px solid rgba(232, 240, 254, 1);
+    background-color: rgba(232, 240, 254, 0.7);
+    caret-color: black;
   }
 
   #thought-input:hover {
     transition: 1s;
     outline: none;
-    background-color: rgba(189, 152, 167, 0.7);
-    caret-color: white;
+    border: 1px solid rgba(232, 240, 254, 1);
+    background-color: rgba(232, 240, 254, 0.7);
+    caret-color: black;
   }
 
   #user-button {
@@ -275,28 +281,28 @@ form {
     text-align: center;
     transition: 1s;
     outline: none;
-    border: none;
+    border: 1px solid rgba(232, 240, 254, 1);
     text-transform: uppercase;
     font-size: 13px;
     font-weight: bold;
     margin-top: -10px;
     margin-bottom: 5%;
-    background-color: rgba(189, 152, 167, 0.2);
+    background-color: rgba(232, 240, 254, 0.2);
   }
 
   #user-button:hover {
     transition: 1s;
     outline: none;
-    border: none;
-    background-color: rgba(189, 152, 167, 0.7);
+    border: 1px solid rgba(232, 240, 254, 1);
+    background-color: rgba(232, 240, 254, 0.7);
     cursor: pointer;
   }
 
   #user-button:active {
     transition: 1s;
     outline: none;
-    border: none;
-    background-color: rgba(189, 152, 167, 0.7);
+    border: 1px solid rgba(232, 240, 254, 1);
+    background-color: rgba(232, 240, 254, 0.7);
     cursor: pointer;
   }
 

@@ -57,7 +57,7 @@ class Form {
                 anime.timeline({ loop: false })
                 .add({
                   targets: '.letters',
-                  translateY: [100,0],
+                  translateY: [200,0],
                   translateZ: 0,
                   opacity: [0,1],
                   easing: "easeOutExpo",

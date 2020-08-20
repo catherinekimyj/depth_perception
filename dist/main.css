@@ -654,10 +654,7 @@ introduction:active {
   justify-content: center;
   align-items: center;
   flex-direction: column; }
-
-#introduction-header {
-  font-size: 30px;
-  font-family: 'Marck Script'; }
+}
 
 @-webkit-keyframes fadeInInfo {
   0% {

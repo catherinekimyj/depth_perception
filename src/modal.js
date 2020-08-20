@@ -1,4 +1,5 @@
 import Form from './form';
+import anime from 'animejs/lib/anime.es.js';
 
 class Modal {
     constructor(canvas) {
