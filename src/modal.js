@@ -3,7 +3,6 @@ import anime from 'animejs/lib/anime.es.js';
 
 class Modal {
     constructor(canvas) {
-debugger
         this.closeModal();
         this.openModal();
     }
@@ -13,13 +12,11 @@ debugger
         const closeBttn = document.getElementById("close");
 
         closeBttn.onclick = function() {
-debugger
             modal.classList.remove('showModal');
             modal.style.display = "none";
         }
 
         window.onclick = function(event) {
-debugger
             if (event.target == modal) {
                 modal.style.display = "none";
             }

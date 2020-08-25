@@ -1,161 +1,213 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Depth Perception | Meditation Visualization</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="./src/public/images/favicon.ico"/>
-        <link rel="stylesheet" href="./dist/main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark" rel="stylesheet">
-    </head>
-    <body>
 
-        <!-- information modal start -->
-        <div id="myInfoModal" class="infoModal">
-            <div class="info-modal-content">
-                <span class="close-info" id="close-info"><i class="fas fa-times"></i></span>
-                <section class="modal-inner">
-                    
-                    <!-- information -->
-                    <div id="introduction-container">
-                        <div id="introduction-header">Welcome to Depth Perception</div>
-                        <br/>
-                        Depth Perception is a meditation visualization app that allows you to write down the thoughts that manifest your mind and visualize letting go.
-                        <br/>
-                        <br/>
-                        There is a space for your name and a place for you to write down your train of thoughts.
-                        <br/>Neither fields are required, and no information is ever stored.
-                        <br/>
-                        <br/>
-                        If the thought field is left blank, you will see  a randomly selected message of mindfulness and meditation from us upon submitting the form.
-                        Choose a sound of your liking and watch your thoughts dissipate over the duration of the music.
-                        The speed of dissipation will depend on the length of your thought and the length of the chosen sound.
-                    </div>
-                    
-                </section>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Depth Perception | Meditation Visualization</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./src/public/images/favicon.ico" />
+    <link rel="stylesheet" href="./dist/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+        integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- information modal start -->
+    <div id="myInfoModal" class="infoModal">
+        <div class="info-modal-content">
+            <span class="close-info" id="close-info"><i class="fas fa-times"></i></span>
+            <section class="modal-inner">
+
+                <!-- information -->
+                <div id="introduction-container">
+                    <div id="introduction-header">Welcome to Depth Perception</div>
+                    <br />
+                    Depth Perception is a meditation visualization app that allows you to write down the thoughts that
+                    manifest your mind and visualize letting go.
+                    <br />
+                    <br />
+                    There is a space for your name and a place for you to write down your train of thoughts.
+                    <br />Neither fields are required, and no information is ever stored.
+                    <br />
+                    <br />
+                    If the thought field is left blank, you will see a randomly selected message of mindfulness and
+                    meditation from us upon submitting the form.
+                    Choose a sound of your liking and watch your thoughts dissipate over the duration of the music.
+                    The speed of dissipation will depend on the length of your thought and the length of the chosen
+                    sound.
+                </div>
+
+            </section>
         </div>
-        <!-- information modal end -->
+    </div>
+    <!-- information modal end -->
 
     <!-- navbar -->
-        <div class="wrapper">
-            <nav class="navbar">
-                 <ul>
-                    <li id="myInformation"><div class="inform-button"><i class="fas fa-info" id="info-button"></i></div></li>
-                    <li id="myBtn"><div class="form-button"><i class="far fa-comment-dots"></i></div></li>
-                    <li id="myGithub"><div class="github-button"><a href="https://github.com/catherinekimyj/" target="_blank"><i class="fab fa-github"></i></a></div></li>
-                    <li id="myLinkedin"><a href="https://www.linkedin.com/in/catherinekimyj/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li id="myangel"><a href="https://angel.co/u/catherinekimyj" target="_blank"><i class="fab fa-angellist"></i></a></li>
-                </ul>
-            </nav>
+    <div class="wrapper">
+        <nav class="navbar">
+            <ul>
+                <li id="myInformation">
+                    <div class="inform-button"><i class="fas fa-info" id="info-button"></i></div>
+                </li>
+                <li id="myBtn">
+                    <div class="form-button"><i class="far fa-comment-dots"></i></div>
+                </li>
+                <li id="myGithub">
+                    <div class="github-button"><a href="https://github.com/catherinekimyj/" target="_blank"><i
+                                class="fab fa-github"></i></a></div>
+                </li>
+                <li id="myLinkedin"><a href="https://www.linkedin.com/in/catherinekimyj/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a></li>
+                <li id="myangel"><a href="https://angel.co/u/catherinekimyj" target="_blank"><i
+                            class="fab fa-angellist"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- modal start -->
+    <div id="myModal" class="modal showModal">
+        <div class="modal-content">
+            <span class="close" id="close"><i class="fas fa-times"></i></span>
+            <p class="user-form-welcome">
+            <h1 class="ml16">
+                <p id="user-greeting"></p>
+            </h1>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+            </p>
+            <section class="modal-inner">
+
+                <!-- user form -->
+                <form class="user-form">
+                    <div class="user-form-inner">
+                        <p class="user-form-name">
+                            Before we begin today's meditation,
+                            <br />
+                            please tell us your name:
+                        </p>
+                        <input type="text" id="name-input" id="user-name" maxlength="35">
+                        <br />
+                        <p class="user-form-thought"> What's on your mind? </p>
+                        <textarea id="thought-input" id="user-thought-input" maxlength="1000"></textarea>
+                        <br />
+                        <button id="user-button">Enter</button>
+                    </div>
+                </form>
+
+            </section>
         </div>
+    </div>
+    <!-- modal end -->
+
+    <!-- canvas -->
+    <canvas id="canvas" class="canvas"></canvas>
+    <section class="user-output-wrapper">
+        <div id="user-output-greet" class="hide-text"></div>
+        <div id="user-output-words" class="hide-text"></div>
+    </section>
+
+
+    <!-- timer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        function change() {
+            let player = document.getElementById('player');
+            player.setAttribute("src", selection.value);
+            player.load();
+        }
+
+        function changeBg() {
+            let canvas = document.getElementById('canvas');
+            canvas.style.backgroundImage = "url(./src/public/images/bg.jpg)";
+        }
+
+        function changeBgBeach() {
+            let canvas = document.getElementById('canvas');
+            canvas.style.backgroundImage = "url(./src/public/images/beach.jpg)";
+        }
+
+        function changeBgMt() {
+            let canvas = document.getElementById('canvas');
+            canvas.style.backgroundImage = "url(./src/public/images/clouds.jpg)";
+        }
+
+        function changeBgForest() {
+            let canvas = document.getElementById('canvas');
+            canvas.style.backgroundImage = "url(./src/public/images/forest.jpg)";
+        }
+
+        function getCurrentTime() {
+            let currentTime = document.getElementById('player').currentTime;
+            let currentSec = Math.floor(currentTime);
+            let countDown = Math.floor(document.getElementById('player').duration - currentSec);
+            let countDownFormatted;
+
+            if (countDown < 60) {
+                countDownFormatted = "00:" + (countDown < 10 ?  "0" + countDown : countDown);
+            } else {
+                let minFormatted = Math.floor(countDown/60);
+                let secFormatted = (Math.floor(countDown % 60)) < 10 ? "0" + (Math.floor(countDown % 60)) : (Math.floor(countDown % 60));
+                countDownFormatted = minFormatted + ":" + secFormatted;
+            };
+
+            const showCurrentTime = document.getElementById('audio-current-time');
+            const showAudioTime = document.getElementById('audio-audio-time');
         
-        <!-- modal start -->
-        <div id="myModal" class="modal showModal">
-            <div class="modal-content">
-                <span class="close" id="close"><i class="fas fa-times"></i></span>
-                <p class="user-form-welcome">
-                    <h1 class="ml16">
-                        <p id="user-greeting"></p>
-                    </h1>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-                </p>
-                <section class="modal-inner">
-                    
-                    <!-- user form -->
-                    <form class="user-form">
-                        <div class="user-form-inner">
-                            <p class="user-form-name">
-                                Before we begin today's meditation,
-                                <br/>
-                                please tell us your name:
-                            </p>
-                            <input type="text" id="name-input" id="user-name" maxlength = "35">
-                            <br/>
-                            <p class="user-form-thought"> What's on your mind? </p> 
-                            <textarea id="thought-input" id="user-thought-input" maxlength = "1000"></textarea>
-                            <br/>
-                            <button id="user-button">Enter</button>
-                        </div>
-                    </form>
-                    
-                </section>
-            </div>
+            if (currentSec === 0) {
+                showCurrentTime.innerHTML = ' ';
+            } else {
+                showCurrentTime.innerHTML = countDownFormatted;
+            }
+        };
+    </script>
+
+    <section id="timer" class="select">
+        <select id="selection" onchange="change()">
+            <option id="selection-option" value="">Select Your Sound</option>
+            <option id="selection-option" value="./src/public/music/30_sec.mp3">30 Second Breathing Room</option>
+            <option id="selection-option" value="./src/public/music/brainwaves.mp3">Serenity [10 min]</option>
+            <option id="selection-option" value="./src/public/music/ocean_waves.mp3">Ocean Waves [8 min]</option>
+            <option id="selection-option" value="./src/public/music/relaxing.mp3">Gleaming Sun [5 min]</option>
+        </select>
+        <br />
+
+        <audio id="player" ontimeupdate="getCurrentTime()">
+            <source id="mp3_src" src="" type="audio/mp3" />
+        </audio>
+
+        <div id="audioplayer">
+            <button id="play-button" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button>
+            <button id="pause-button" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button>
+            <button id="volume-mute-button" onclick="document.getElementById('player').volume = 0"><i class="fas fa-volume-mute"></i></button>
+            <button id="volume-down-button" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button>
+            <button id="volume-up-button" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button>
+            <span id="audio-current-time"></span>
         </div>
-        <!-- modal end -->
-        
-        <!-- canvas -->
-        <canvas id="canvas" class="canvas"></canvas>
-            <section class="user-output-wrapper">
-                    <div id="user-output-greet" class="hide-text"></div>
-                    <div id="user-output-words" class="hide-text"></div>
-            </section>
-            
+    </section>
+    
 
-            <!-- timer -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <script>
-                function change() {
-                    let player = document.getElementById('player');
-                    player.setAttribute("src", selection.value);
-                    player.load();
-                }
+    <section id="background-container">
+        <span id="main-bg" onclick="changeBg()"><i class="fas fa-sun"></i></span>
+        <span id="beach-bg" onclick="changeBgBeach()"><i class="fas fa-umbrella-beach"></i></span>
+        <span id="mountain-bg" onclick="changeBgMt()"><i class="fas fa-mountain"></i></span>
+        <span id="forest-bg" onclick="changeBgForest()"><i class="fas fa-tree"></i></span>
+    </section>
 
-                function changeBg() {
-                    let canvas = document.getElementById('canvas');
-                    canvas.style.backgroundImage="url(./src/public/images/bg.jpg)";
-                }
+    <!-- footer -->
+    <div id="footer-name">
+        Created by <a href="mailto: catkimyj@gmail.com" target="_blank">Catherine Kim</a>
+    </div>
 
-                function changeBgBeach() {
-                    let canvas = document.getElementById('canvas');
-                    canvas.style.backgroundImage="url(./src/public/images/beach.jpg)";
-                }
+    <script src="./dist/main.js"></script>
+    <script src="./blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="player.js"></script>
+</body>
 
-                function changeBgMt() {
-                    let canvas = document.getElementById('canvas');
-                    canvas.style.backgroundImage="url(./src/public/images/clouds.jpg)";
-                }
-
-                function changeBgForest() {
-                    let canvas = document.getElementById('canvas');
-                    canvas.style.backgroundImage="url(./src/public/images/forest.jpg)";
-                }
-            </script>
-
-            <section id="timer" class="select">
-                <select id="selection" onchange="change()">
-                    <option id="selection-option" value="">Select Your Sound</option>
-                    <option id="selection-option" value="./src/public/music/30_sec.mp3">30 Second Breathing Room</option>
-                    <option id="selection-option" value="./src/public/music/brainwaves.mp3">Serenity [10 min]</option>
-                    <option id="selection-option" value="./src/public/music/ocean_waves.mp3">Ocean Waves [8 min]</option>
-                    <option id="selection-option" value="./src/public/music/relaxing.mp3">Gleaming Sun [5 min]</option>
-                </select>
-                <br/>
-
-                <audio id="player" controls="controls">
-                    <source id="mp3_src" src="" type="audio/mp3" />
-                </audio>
-            </section>
-
-            <section id="background-container">
-                <span id="main-bg" onclick="changeBg()"><i class="fas fa-sun"></i></span>
-                <span id="beach-bg" onclick="changeBgBeach()"><i class="fas fa-umbrella-beach"></i></span>
-                <span id="mountain-bg" onclick="changeBgMt()"><i class="fas fa-mountain"></i></span>
-                <span id="forest-bg" onclick="changeBgForest()"><i class="fas fa-tree"></i></span>
-            </section>
-
-            <!-- footer -->
-            <div id="footer-name">
-                Created by <a href="mailto: catkimyj@gmail.com" target="_blank">Catherine Kim</a>
-            </div>
-
-        <script src="./dist/main.js"></script>
-        <script src="./blotter.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-    </body>
 </html>
