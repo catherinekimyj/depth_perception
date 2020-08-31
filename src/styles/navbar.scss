@@ -3,14 +3,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 2.5%;
-    top: 15%;
+    left: 3%;
+    top: 17%;
     width: 5%;
     max-width: 50px;
-    height: 65%;
+    height: 60%;
     background-color:white;
     border-radius: 25px;
-    opacity: 0.65;
+    opacity: 0.55;
     animation: fadeInAnimation ease 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -23,20 +23,20 @@
     } 
     
     100% { 
-        opacity: 0.65; 
+        opacity: 0.55; 
     } 
 } 
 
 .navbar ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
     padding: 0;
-    height: 70%;
+    height: 75%;
     position: absolute;
-    top: 12%;
+    top: 10%;
     left: -150%;
     -webkit-animation: slide 4s forwards;
     -webkit-animation-delay: 2s;
@@ -50,7 +50,7 @@
 }
 
 @keyframes slide {
-    100% { left: 19%; }
+    100% { left: 18%; }
 }
 
 ul li {
@@ -91,25 +91,181 @@ li a:link {
     cursor: pointer;
 }
 
+#myInformation {
+    position: relative;
+}
+
+#myInformation .myInfo-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: white;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0.8;
+    font-family: "Palanquin Dark";
+    font-weight: bold;
+  
+    /* Position the tooltip */
+    position: absolute;
+    right: -130px;
+    top: 0px;
+    z-index: 1;
+}
+
+#myInformation:hover .myInfo-text {
+    visibility: visible;
+    animation: fadeIn ease 0.5s;
+}
+
 #myBtn:hover .form-button {
     transition: 1.5s;
     transform: rotateZ(360deg);
     cursor: pointer;
 } 
 
+#myBtn {
+    position: relative;
+}
+
+#myBtn .myBtn-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: white;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0.8;
+    font-family: "Palanquin Dark";
+    font-weight: bold;
+  
+    /* Position the tooltip */
+    position: absolute;
+    right: -120px;
+    top: 0px;
+    z-index: 1;
+  }
+  
+#myBtn:hover .myBtn-text {
+    visibility: visible;
+    animation: fadeIn ease 0.5s;
+  }
+
 #myGithub:hover .github-button {
     transition: 1.5s;
     transform: rotateX(360deg);
 }
 
-#myLinkedin:hover {
+#myGithub {
+    position: relative;
+}
+
+#myGithub .myGithub-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: white;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0.8;
+    font-family: "Palanquin Dark";
+    font-weight: bold;
+  
+    /* Position the tooltip */
+    position: absolute;
+    right: -120px;
+    top: 0px;
+    z-index: 1;
+}
+
+#myGithub:hover .myGithub-text {
+    visibility: visible;
+    animation: fadeIn ease 0.5s;
+}
+
+#myLinkedin:hover .linkedin-button {
     transition: 1.5s;
+    cursor: pointer;
     transform: rotateY(360deg);
 }
 
-#myangel:hover {
+#myLinkedin {
+    position: relative;
+}
+
+#myLinkedin .myLinkedin-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: white;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0.8;
+    font-family: "Palanquin Dark";
+    font-weight: bold;
+  
+    /* Position the tooltip */
+    position: absolute;
+    right: -120px;
+    top: 0px;
+    z-index: 1;
+}
+
+#myLinkedin:hover .myLinkedin-text {
+    visibility: visible;
+    animation: fadeIn ease 0.5s;
+}
+
+.fa-angellist:hover {
     transition: 1.5s;
     transform: scale(1.3);
+}
+
+#myangel {
+    position: relative;
+}
+
+#myangel .myAngel-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: white;
+    color: black;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    opacity: 0.8;
+    font-family: "Palanquin Dark";
+    font-weight: bold;
+  
+    /* Position the tooltip */
+    position: absolute;
+    right: -120px;
+    top: 0px;
+    z-index: 1;
+    scale: 1;
+}
+
+#myangel:hover .myAngel-text {
+    visibility: visible;
+    animation: fadeIn ease 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
 }
 
 li:active {

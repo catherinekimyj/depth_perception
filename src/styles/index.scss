@@ -52,6 +52,16 @@ html, body {
     font-family: 'Palanquin', sans-serif;
     max-width: 450px;
     max-height: 70%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#user-output-encourage {
+    font-size: 15.5px;
+    font-weight: regular;
+    font-family: 'Palanquin Dark', sans-serif;
+    max-width: 450px;
+    max-height: 70%;
     text-align: center;
 }
 
@@ -89,19 +99,3 @@ html, body {
     text-align: center;
 }
 
-audio::-webkit-media-controls-timeline,
-video::-webkit-media-controls-timeline {
-    display: none;
-}
-
-audio::-webkit-media-controls-volume-slider {
-    display: none;
-}
-
-audio::-webkit-media-controls-volume-slider-container {
-    display: none;
-}
-
-audio::-webkit-media-controls-mute-button {
-    display: none;
-}

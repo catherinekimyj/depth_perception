@@ -29,18 +29,20 @@
                     <div id="introduction-header">Welcome to Depth Perception</div>
                     <br />
                     Depth Perception is a meditation visualization app that allows you to write down the thoughts that
-                    manifest your mind and visualize letting go.
+                    manifest your mind and visualize letting go of those thoughts.
                     <br />
-                    <br />
-                    There is a space for your name and a place for you to write down your train of thoughts.
-                    <br />Neither fields are required, and no information is ever stored.
-                    <br />
-                    <br />
-                    If the thought field is left blank, you will see a randomly selected message of mindfulness and
-                    meditation from us upon submitting the form.
-                    Choose a sound of your liking and watch your thoughts dissipate over the duration of the music.
-                    The speed of dissipation will depend on the length of your thought and the length of the chosen
-                    sound.
+                    <ul>
+                        <li>Fill out the form - there is a space for your name and your current train of thought. Neither fields are required.
+                        </li>
+                        <li>
+                            Choose a sound from the dropdown and watch your thoughts disspitate over the duration of the music.
+                        </li>
+                        <li>
+                            Feel free to change up the backdrop by clicking the buttons on the bottom-right corner of the screen.
+                        </li>
+                    </ul>
+                    
+                    Enjoy your meditation.
                 </div>
 
             </section>
@@ -54,18 +56,26 @@
             <ul>
                 <li id="myInformation">
                     <div class="inform-button"><i class="fas fa-info" id="info-button"></i></div>
+                    <span class="myInfo-text">Information</span>
                 </li>
                 <li id="myBtn">
                     <div class="form-button"><i class="far fa-comment-dots"></i></div>
+                    <span class="myBtn-text">Back to Form</span>
                 </li>
                 <li id="myGithub">
                     <div class="github-button"><a href="https://github.com/catherinekimyj/" target="_blank"><i
                                 class="fab fa-github"></i></a></div>
+                    <span class="myGithub-text">Github</span>
                 </li>
-                <li id="myLinkedin"><a href="https://www.linkedin.com/in/catherinekimyj/" target="_blank"><i
-                            class="fab fa-linkedin-in"></i></a></li>
+                <li id="myLinkedin">
+                    <div class="linkedin-button"><a href="https://www.linkedin.com/in/catherinekimyj/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a></div>
+                    <span class="myLinkedin-text">LinkedIn</span>
+                </li>
                 <li id="myangel"><a href="https://angel.co/u/catherinekimyj" target="_blank"><i
-                            class="fab fa-angellist"></i></a></li>
+                    class="fab fa-angellist"></i></a>
+                    <span class="myAngel-text">Angellist</span>
+                </li>
             </ul>
         </nav>
     </div>
@@ -108,6 +118,7 @@
     <canvas id="canvas" class="canvas"></canvas>
     <section class="user-output-wrapper">
         <div id="user-output-greet" class="hide-text"></div>
+        <div id="user-output-encourage" class="hide-text"></div>
         <div id="user-output-words" class="hide-text"></div>
     </section>
 
@@ -119,6 +130,14 @@
             let player = document.getElementById('player');
             player.setAttribute("src", selection.value);
             player.load();
+        }
+
+        function playSound() {
+            let player = document.getElementById('player');
+
+            if (player.src !== "") {
+                player.play();
+            }
         }
 
         function changeBg() {
@@ -181,12 +200,14 @@
         </audio>
 
         <div id="audioplayer">
-            <button id="play-button" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button>
+            <button id="play-button" onclick="playSound()"><i class="fas fa-play"></i></button>
             <button id="pause-button" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button>
             <button id="volume-mute-button" onclick="document.getElementById('player').volume = 0"><i class="fas fa-volume-mute"></i></button>
             <button id="volume-down-button" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button>
             <button id="volume-up-button" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button>
-            <span id="audio-current-time"></span>
+            <div id="audio-time-container">
+                <span id="audio-current-time" class="audio-current-time"></span>
+            </div>
         </div>
     </section>
     
@@ -207,7 +228,7 @@
     <script src="./blotter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="player.js"></script>
+    <!-- <script src="player.js"></script> -->
 </body>
 
 </html>

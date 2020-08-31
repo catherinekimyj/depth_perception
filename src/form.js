@@ -31,8 +31,10 @@ class Form {
             e.preventDefault();
             let userGreet = document.getElementById('user-output-greet');
             let userText = document.getElementById('user-output-words');
+            let userEncourage = document.getElementById('user-output-encourage');
             userGreet.style.display === "none";
             userText.style.display === "none";
+            userEncourage.style.display === "none";
 
             // variables for name and thought inputs //
             let name = nameInput.value;
@@ -46,24 +48,16 @@ class Form {
 
             function animateInputIn() {
                 let userGreet = document.getElementById('user-output-greet');
+                let userEncourage = document.getElementById('user-output-encourage');
                 let userText = document.getElementById('user-output-words');
 
                 userGreet.style.display === "inline-block";
                 userText.style.display === "inline-block";
-        debugger
+                userEncourage.style.display === "inline-block";
+debugger
                 userGreet.innerHTML = userGreet.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
                 userText.innerHTML = userText.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
-
-                anime.timeline({ loop: false })
-                .add({
-                  targets: '.letters',
-                  translateY: [200,0],
-                  translateZ: 0,
-                  opacity: [0,1],
-                  easing: "easeOutExpo",
-                  duration: 20000,
-                  delay: (el, i) => 30
-                })
+                userEncourage.innerHTML = userEncourage.innerText.replace(/\S/g, "<span class='letters'>$&</span>");
             };
 
             let e1 = '"Your goal is not to battle with the mind, but to witness the mind." - Swami Muktananda';
@@ -80,7 +74,7 @@ class Form {
                 '"Distractions are everywhere. Notice what takes your attention, acknowledge it, then let it go." - Headspace',
                 '"In the midst of movement and chaos, keep stillness inside of you." - Anonymous',
                 '"Life is short. We can live it lost in thought or we can choose to be present as life unfolds around us." - Headspace',
-                '"Peace cannot be kept by force it can be achieved by understanding" - Albert Einstein',
+                '"Peace cannot be kept by force; it can be achieved by understanding" - Albert Einstein',
                 '"The mind can go in a thousand directions, but on this beautiful path, I walk in peace. With each step, the wind blows. With each step, a flower blooms." - Thich Nhat Hanh',
                 '"Your vision will become clear only when you look into your own heart. Who looks outside, dreams, who looks insides, awakes." - Carl Jung Carl Gustav',
                 '"You find peace not by rearranging the circumstances of your life, but by realizing who you are at the deepest level." - Eckhard Tolle',
@@ -97,16 +91,17 @@ class Form {
             }
 
             if (obj["thought"] !== "") {
+debugger
+                document.getElementById("user-output-encourage").innerHTML = encouragement;
                 document.getElementById("user-output-words").innerHTML = obj["thought"];
                 animateInputIn();
             } else {
-                document.getElementById("user-output-words").innerHTML = encouragement;
+debugger
+                document.getElementById("user-output-encourage").innerHTML = encouragement;
                 animateInputIn();
             }
             
             modal.style.display = "none";
-            // modal.classList.add("hideModal");
-            // console.log(obj);
         }
     }
     
@@ -117,16 +112,11 @@ class Form {
         anime.timeline({loop: false})
         .add({
             targets: '.ml16 .letter',
-            translateY: [-100,0],
+            translateY: [-400,0],
+            opacity: [0, 1],
             easing: "easeOutExpo",
             duration: 1400,
             delay: (el, i) => 250 * i
-        }).add({
-            targets: '.ml16',
-            opacity: 1,
-            duration: 1000,
-            easing: "easeOutExpo",
-            delay: 1000
         });
     }
 }

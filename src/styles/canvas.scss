@@ -9,29 +9,13 @@
     text-align: center;
 }
 
-/*
-#audioplayer {
-    opacity: 0.65;
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    outline-style: none;
-    height: 30px;
-    width: 200px;
-    text-align: center;
-}
-*/
-
 #selection {
     outline-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    width: 28%;
+    width: 180px;
     font-size: 12px;
     font-family: 'Palanquin', sans-serif;
     font-weight: 700;
@@ -41,20 +25,41 @@
 
 #introduction-container {
     font-family: 'Palanquin', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     align-content: center;
     text-align: center;
     width: 90%;
     height: 90%;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+#introduction-container ul {
+    list-style-type: square;
+    text-align: left;
+    padding-right: 10px;
+}
+
+#introduction-container ul li {
+    font-size: 16px;
+    font-family: 'Palanquin', sans-serif;
+}
+
+#introduction-container ul li:hover {
+    cursor: default;
+}
+
+.introduction-footer-message {
+    text-align: center;
+    width: 100%;
+}
 #introduction-header {
-    font-size: 34px;
+    font-size: 36px;
     font-family: 'Marck Script';
+    position: absolute;
+    top: -32px;
 }
 
 @keyframes fadeInInfo { 
@@ -67,9 +72,18 @@
     } 
 }   
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1170px) {
     #introduction-header {
         font-size: 28px;
+        top: -25px;
+        transition: 1s;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    #introduction-header {
+        font-size: 24px;
+        top: -17px;
         transition: 1s;
     }
 }
@@ -205,17 +219,34 @@
     height: 100%;
 }
 
-#audio-current-time {
+#audio-time-container {
     position: absolute;
     top: 8%;
-    left: 46%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#audio-current-time {
     text-align: center;
     font-family: 'Rubik', sans-serif;
     font-size: 40px;
-    width: 8%;
-    transition: 0.25s;
+    animation: fadeInAnimation ease 1s;
+    transition: 1s;
     color: rgba(black, 0.75);
     text-shadow: 2px 2px 2px rgba(black, 0.3);
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+
+    100% { 
+        opacity: 0.75; 
+    } 
 }
 
 #audioplayer > button {
@@ -236,4 +267,8 @@
     font-size: 16px;
     cursor: pointer;
     border: 0px;
+}
+
+select {
+    text-align-last: center;
 }

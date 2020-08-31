@@ -95,8 +95,8 @@ form {
     padding-left: 13px;
     padding-right: 13px;
     position: relative;
-    top: -15px;
-    right: -15px;
+    top: -12px;
+    right: -12px;
     cursor: pointer;
     z-index: 9999;
     transition: 1.2s;
@@ -104,10 +104,8 @@ form {
   
   .close:hover,
   .close:focus {
-    transition: 1.2s;
-    color: white;
-    background-color: rgba(232, 240, 254, 0.9);
-    border: 2px solid white;
+    transition: 0.5s;
+    transform: scale(1.2);
     text-decoration: none;
     cursor: pointer;
   }
@@ -124,8 +122,8 @@ form {
     padding-left: 13px;
     padding-right: 13px;
     position: relative;
-    top: -15px;
-    right: -15px;
+    top: -12px;
+    right: -12px;
     cursor: pointer;
     z-index: 9999;
     transition: 1.2s;
@@ -134,9 +132,8 @@ form {
   .close-info:hover,
   .close-info:focus {
     transition: 0.5s;
-    color: white;
-    background-color: rgba(232, 240, 254, 0.9);
-    border: 2px solid white;
+    color: black;
+    transform: scale(1.2);
     text-decoration: none;
     cursor: pointer;
   }
@@ -316,7 +313,6 @@ form {
     letter-spacing: 1;
     overflow: hidden;
     position: absolute;
-    top: -93px; /* -93px */
     width: 100%;
     text-align: center;
   }
