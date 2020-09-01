@@ -31,11 +31,11 @@ The Depth Perception demo loads a modal containing the form. The greeting is cus
 
 App Information button at the top of the navbar shows basic instructions and information.
 
-![image info](./src/public/images/wireframe_form_HQ.jpg)
+![image info](./src/public/images/depth_perception_modal.jpg)
 
 Once submitted, the user is led to the main page where meditation of different lengths can be selected. As shown below:
 
-![image info](./src/public/images/wireframe_main_HQ.jpg)
+![image info](./src/public/images/depth_perception_main.jpg)
 
 ### **Architecture and Technology**
 
