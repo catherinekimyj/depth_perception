@@ -25,6 +25,9 @@ The words submitted by the user will slowly dissipate to the length of the chose
 
 Below is an example of how Depth Perception adjusts to different window sizes:
 
+<p align="center">
+  <img src="./src/public/images/depth_perception_minimize.gif" />
+</p>
 ![](./src/public/images/depth_perception_minimize.gif?style=centerme)
 
 ### **Wireframes**
