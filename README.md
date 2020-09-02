@@ -8,7 +8,7 @@ Depth Perception is a meditation visualization demo that allows the user to writ
 
 The words submitted by the user will slowly dissipate to the length of the chosen meditation sound. The speed of dissipation is dependent on the length of both the submitted input and the music; the animation duration is calculated so that the last bits of user input will dissolve towards the end of the track.
 
-![](./src/public/images/depth_perception.gif)
+![](./src/public/images/depth_perception_mainpage.gif)
 
 ### **Functionality and MVPs**
 
@@ -23,7 +23,7 @@ The words submitted by the user will slowly dissipate to the length of the chose
 
 Below is an example of how Depth Perception adjusts to different window sizes:
 
-![](./src/public/images/depth_perception_screen.gif)
+![](./src/public/images/depth_perception_minimize.gif)
 
 ### **Wireframes**
 
@@ -48,7 +48,7 @@ Once submitted, the user is led to the main page where meditation of different l
 
 The animation begins when an event listener on the "play" event of the audio player is triggered. The animation is calculated to last over the duration of the chosen music. The following code snippet shows how the calculation was achieved.
 
-The sum of character lengths of the name-input greeting and the thought input is saved to a variable. Then, the number of milliseconds of the each song is divided by the variable (storing the combined character length) to output the ratio we will use for delay time of characters and duration of each character animation. Each character is wrapped in a `<span>`, so that the animation can be applied individually to each character.
+The sum of character lengths of the name input, the randomly selected quote, and the thought input is saved to a variable. Then, the number of milliseconds of the each song is divided by the variable (storing the combined character length, plus 4 characters for buffer) to output the ratio we will use for delay time of characters and duration of each character animation. Each character is wrapped in a `<span>`, so that the animation can be applied individually to each character.
 
 ```javascript
 const anim = function () {
@@ -56,59 +56,39 @@ const anim = function () {
   let userText = document.getElementById("user-output-words");
   let userEncourage = document.getElementById("user-output-encourage");
   let selection = document.getElementById("selection");
-  let userGreetTime = userGreet.innerText.length;
+  let userGreetTime = userGreet.innerText.match(/\S/g).length;
+  let userEncourageTime = userEncourage.innerText.match(/\S/g).length;
   let userTextTime = userText.innerText.length;
-  let userEncourageTime = userEncourage.innerText.length;
   let delayTime;
   let combinedChars;
-  if (userTextTime === 0) {
-    debugger;
+
+  if (userTextTime === undefined || userTextTime === 0) {
     combinedChars = userEncourageTime + userGreetTime;
   } else {
-    debugger;
+    let userTextTime = userText.innerText.match(/\S/g).length;
     combinedChars = userTextTime + userGreetTime + userEncourageTime;
   }
 
   if (selection.value === "./src/public/music/brainwaves.mp3") {
-    debugger;
-    delayTime = 600000 / combinedChars;
+    delayTime = 600000/(combinedChars + 4);
   } else if (selection.value === "./src/public/music/ocean_waves.mp3") {
-    debugger;
-    delayTime = 489000 / combinedChars;
+    delayTime = 489000/(combinedChars + 4);
   } else if (selection.value === "./src/public/music/relaxing.mp3") {
-    debugger;
-    delayTime = 304000 / combinedChars;
+    delayTime = 304000/(combinedChars + 4);
   } else if (selection.value === "./src/public/music/30_sec.mp3") {
-    debugger;
-    delayTime = 30000 / combinedChars;
+    delayTime = 30000/(combinedChars + 4);
   }
 
   textAnimation = anime.timeline({ loop: false }).add({
     targets: ".letters",
     opacity: [1, 0],
     easing: "easeInExpo",
-    duration: 4000,
+    duration: delayTime * 3,
     autoplay: false,
     direction: "normal",
-    // delay: (el, i) => delayTime * (i * 1),
-    delay: (el, i) => i * 1.025 * delayTime,
+    delay: (el, i) => delayTime * i
   });
 };
-
-const player = document.getElementById("player");
-player.addEventListener("play", () => {
-  if (player.currentTime === 0) {
-    anim();
-    textAnimation.play();
-    animation.animate();
-  } else {
-    textAnimation.play();
-  }
-});
-
-player.addEventListener("pause", () => {
-  textAnimation.pause();
-});
 ```
 
 ### **Implementation Timeline**
