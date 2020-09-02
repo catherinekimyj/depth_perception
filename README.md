@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" media="all" href="markdown_styles.css" />
+<link rel="stylesheet" type="text/css" media="all" href="readme.css" />
 
 # Depth Perception
 
