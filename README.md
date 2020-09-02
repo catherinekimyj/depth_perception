@@ -10,7 +10,9 @@ Depth Perception is a meditation visualization demo that allows the user to writ
 
 The words submitted by the user will slowly dissipate to the length of the chosen meditation sound. The speed of dissipation is dependent on the length of both the submitted input and the music; the animation duration is calculated so that the last bits of user input will dissolve towards the end of the track.
 
-![](./src/public/images/depth_perception_mainpage.gif?style=centerme)
+<p align="center">
+  <img src="./src/public/images/depth_perception_mainpage.gif" />
+</p>
 
 ### **Functionality and MVPs**
 
@@ -28,7 +30,6 @@ Below is an example of how Depth Perception adjusts to different window sizes:
 <p align="center">
   <img src="./src/public/images/depth_perception_minimize.gif" />
 </p>
-![](./src/public/images/depth_perception_minimize.gif?style=centerme)
 
 ### **Wireframes**
 
