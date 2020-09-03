@@ -25,7 +25,7 @@
 
 #introduction-container {
     font-family: 'Palanquin', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     align-content: center;
     text-align: center;
     width: 90%;
@@ -56,10 +56,10 @@
     width: 100%;
 }
 #introduction-header {
-    font-size: 36px;
+    font-size: 58px;
     font-family: 'Marck Script';
     position: absolute;
-    top: -32px;
+    top: -48px;
 }
 
 @keyframes fadeInInfo { 
@@ -74,16 +74,30 @@
 
 @media only screen and (max-width: 1170px) {
     #introduction-header {
-        font-size: 28px;
-        top: -25px;
+        font-size: 48px;
+        top: -40px;
+        transition: 1s;
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    #introduction-header {
+        font-size: 48px;
+        top: -40px;
         transition: 1s;
     }
 }
 
 @media only screen and (max-width: 930px) {
-    #introduction-header {
-        font-size: 24px;
-        top: -17px;
+    #introduction-container {
+        font-size: 14px;
+        transition: 1s;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    #introduction-container ul li {
+        font-size: 14px;
         transition: 1s;
     }
 }
